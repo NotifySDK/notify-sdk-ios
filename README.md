@@ -4,10 +4,6 @@
 
 #### Libnotify
 ```
-pod 'NotifySDK'
-```
-or
-```
 pod 'NotifySDK/Notify'
 ```
 #### Libverify with UI Components
