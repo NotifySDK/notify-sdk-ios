@@ -5,3 +5,7 @@
 ### Version 1.0.4
 
 * Move to frameworks
+
+### Version 1.0.5
+
+* Few fixes
