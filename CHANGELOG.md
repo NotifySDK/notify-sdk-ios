@@ -38,8 +38,12 @@
 
 ### Version 1.0.8
 
-* LibverifyControls: Hotfix of NTFPhoneFormatter
+* VerifyControls: Hotfix of NTFPhoneFormatter
 
 ### Version 1.0.9
 
 * Internal changes
+
+### Version 1.0.10
+
+* Notify: Hotfix of content extensions.
