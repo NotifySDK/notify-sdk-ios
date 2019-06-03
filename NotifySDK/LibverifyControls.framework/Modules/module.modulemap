@@ -1,0 +1,6 @@
+framework module LibverifyControls {
+  umbrella header "LibverifyControls.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Enabled</key>
+        <true/>
+        <key>Debug</key>
+        <true/>
+        <key>LibNotify</key>
+        <dict>
+            <key>Landing</key>
+            <dict>
+                <key>CloseButtonColor</key>
+                <string>#70D05A</string>
+                <key>ButtonTextColor</key>
+                <string>#FFFFFF</string>
+                <key>AccentColor</key>
+                <string>#70D05A</string>
+                <key>TextColor</key>
+                <string>#000000</string>
+                <key>BackgroundColor</key>
+                <string>#FFFFFF</string>
+            </dict>
+            <key>Enabled</key>
+            <true/>
+            <key>Application</key>
+            <dict>
+                <key>Name</key>
+                <string>ios-libnotify-app</string>
+                <key>Id</key>
+                <string>Identifier of application</string>
+                <key>Secret</key>
+                <string>Secret key you can get from CRM</string>
+            </dict>
+        </dict>
+        <key>LibVerify</key>
+        <dict>
+            <key>Enabled</key>
+            <true/>
+            <key>DirectPush</key>
+            <false/>
+            <key>Application</key>
+            <dict>
+                <key>Name</key>
+                <string>ios-libverify-app</string>
+                <key>Key</key>
+                <string>stZZBU2Vt8f1tLxM</string>
+            </dict>
+        </dict>
+        <key>SharedGroupId</key>
+        <string>group.ru.mail.notify.test</string>
+    </dict>
+</plist>

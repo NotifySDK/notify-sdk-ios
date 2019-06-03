@@ -20,3 +20,26 @@
 * Libnotify: Open notification activity in separate window
 * Libverify: Fix API for better support swift
 * Libverify: Open push settings in separate window
+
+### Version 1.0.7
+
+* Notify: Add redesign of landing
+* Notify: Handle landing colors received from APNS pushes
+* Notify: User can disable sending APNS pushes
+* Notify: Fix bug when instanceId remain nonsended to server 
+* Notify: Sending field `last_user_id` from extensions
+* Verify: Developers can change librarie's language. It will be used for SMS
+* Verify: Add support 13 languages
+* Verify: Fix of lost instance_id
+* Verify: Add support of ServiceExtension.
+* Verify: Changing public API.
+* Verify: Add support to enable sandbox.
+* VerifyControls: Developer can change language of `NTFPhoneFormatter`.
+
+### Version 1.0.8
+
+* LibverifyControls: Hotfix of NTFPhoneFormatter
+
+### Version 1.0.9
+
+* Internal changes

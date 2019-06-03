@@ -1,0 +1,6 @@
+framework module Libverify {
+  umbrella header "Libverify.h"
+
+  export *
+  module * { export * }
+}
