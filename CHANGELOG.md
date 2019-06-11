@@ -46,4 +46,8 @@
 
 ### Version 1.0.10
 
-* Notify: Hotfix of content extensions.
+* Notify: Hotfix of content extensions
+
+### Version 1.0.11
+
+* Notify: Hotfix of sending pushstatus
