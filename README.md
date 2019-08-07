@@ -2,7 +2,6 @@
 
 Notify SDK is a solution for sending push notifications and authorize users through sms/push/IVR. 
 
-
 ## Libraries
 
 There are two independent libraries `Libnotify` and `Libverify`. They are based on common library called `NotifyCore`. Also there is library worked over `Libverify` and called `LibverifyControls`. All libraries are wrapped in dynamic frameworks.  
@@ -13,7 +12,7 @@ Lets you work with push notifications
 
 ### Libverify
 
-Lets you authenticate user through Push Notifications.
+Lets you verify user through Push Notifications to suitable services or through SMS.
 
 ### LibverifyControls
 
@@ -22,8 +21,6 @@ Makes your work with Libverify more simple. Provides UI-solution for input phone
 ## Demo app
 
 Will be presented soon.
-
-
 
 ## Checklist
 
@@ -35,21 +32,22 @@ Items from this list are required for correct integration of libraries to your a
 
 ### Libnotify
 
-* setup application id and secret in config of Notify. You can configure application name instead but this property is deprecated and will be removed soon.
+* setup application name in config of Notify.
 * implement NTFNotifyDelegate protocol and install delegate to `[NTFNotify getInstance]`
 * setup landing colors in config (be carefull, all versions greater than 1.0.6 work with another color scheme and if libnotify is already integrated to application you need to check colors and update them).
+* implement service extension and content extension and enable libnotify inside of these extensions
 
 ### Libverify
 
 * setup application name and application id in config of Verify
-* to test push notifications you can enable flag `useSandbox` in VerifyConfig. This property is setupable only through code and works with enabled debug mode only.
+* to test push notifications you can enable flag `useSandbox` in VerifyConfig. This property is setupable only through code and works with enabled debug mode only
+* implement service extension and enable libverify inside of it
 
 ### LibverifyControls
 
 * Prepare localization:
   * Add string `phone-formatter-search-bar-title` with value `Search`  and `phone-formatter-navigationItem-title` with value `Country codes` accordingly to Localized.strings in main bundle.
   * **Or** you can implement method `configureCountriesCodesViewController:` of `NTFPhoneFormatterDelegate` and configure view controller before it will be presented.
-
 
 ## Installation
 
@@ -204,15 +202,15 @@ We open landing interface in libnotify and message settings interface in libveri
 
 Next recommendations will help you to avoid incorrect behaviour
 
-1. Try to don't get access to your main window using method `[[UIApplication sharedApplication] keyWindow]`. For details look at Technical notes above.
+* Try to don't get access to your main window using method `[[UIApplication sharedApplication] keyWindow]`. For details look at Technical notes above.
 
 ## Requirements
 
-iOS 10.0
+iOS 9.0
 
-### Note
+## Known Issues
 
-Support of ios 9 is declared but actually applications won't work on iOS 9. It will be fixed soon. 
+* (iOS 9.*): APNS pushes delivered to active application will be rejected and library will send event PushStatus with value Failed.REJECTED_IOS9_FOREGROUND.  It's because of library doesn't contains tools to show incoming pushes inside application.
 
 ## License
 

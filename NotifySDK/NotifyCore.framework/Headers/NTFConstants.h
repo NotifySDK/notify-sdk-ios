@@ -4,6 +4,8 @@
 
 #import <NotifyCore/NTFMacros.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class UNNotificationContent;
 
 /**
@@ -158,3 +160,5 @@ NTF_EXTERN NSString *const NTFUIErrorCodeKey;
   The userInfo key describing an error stacktrace if available.
  */
 NTF_EXTERN NSString *const NTFErrorStackTraceKey;
+
+NS_ASSUME_NONNULL_END

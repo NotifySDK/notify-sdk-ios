@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NTFApp.h</key>
 		<data>
-		aEQkv8tjPs+e7rGCkBOvqbyRiL8=
+		zc/bVpk+/gEeSH8ljE08bpi98co=
 		</data>
 		<key>Headers/NTFAppConfig.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/NTFConstants.h</key>
 		<data>
-		xHDVZvCwl5VF55GSTEeTa19x2To=
+		ovELmqhmXjsxzrfVndOgQsMdLkA=
 		</data>
 		<key>Headers/NTFLogReceiver.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VBcQnDcrJGW6JfD7QC75GGoGXOE=
+		3rLXwR+9tmIorB2HwCSma11AuZY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,11 +55,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aEQkv8tjPs+e7rGCkBOvqbyRiL8=
+			zc/bVpk+/gEeSH8ljE08bpi98co=
 			</data>
 			<key>hash2</key>
 			<data>
-			UV/RXg7KbrS0XRL9kXBK38AeOjx2ByEwmqngVks/grU=
+			lh24dwODKoqVcV4oKzSc1+uBqdYnlgjJUoqTMqg5vW8=
 			</data>
 		</dict>
 		<key>Headers/NTFAppConfig.h</key>
@@ -77,11 +77,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xHDVZvCwl5VF55GSTEeTa19x2To=
+			ovELmqhmXjsxzrfVndOgQsMdLkA=
 			</data>
 			<key>hash2</key>
 			<data>
-			r44keIGsY7sy0G/yLZ7NAfTazcngeIn0z9bBS/YZ/U8=
+			0Twc39Wc4b9mqmkaJUW+DwbORNpOe74MVrK3wLJCqAA=
 			</data>
 		</dict>
 		<key>Headers/NTFLogReceiver.h</key>

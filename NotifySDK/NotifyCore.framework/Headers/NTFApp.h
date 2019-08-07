@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param eventsReceiver should implement either protocol NTFUnhandledErrorReceiver
  * or NTFMonitoringEventReceiver or both.
  */
-+ (BOOL) initWithDefaultConfigAndEventsReceiver:(nullable id)eventsReceiver NS_SWIFT_NAME(initWithDefaultConfig(andEventsReceiver:));
++ (BOOL) initWithDefaultConfigAndEventsReceiver:(nullable id)eventsReceiver NS_SWIFT_NAME(initWithDefaultConfig(andEventsReceiver:)) NS_EXTENSION_UNAVAILABLE("Use method initExtensionWithDefaultConfigAndEventsReceiver: for init library in extension");
 
 /**
  * Initialize services with custom config
@@ -44,14 +44,14 @@ NS_ASSUME_NONNULL_BEGIN
  * or NTFMonitoringEventReceiver or both.
  */
 + (BOOL) initWithConfig:(NTFAppConfig *)config
-      withEventsReceiver:(nullable id)eventsReceiver;
+      withEventsReceiver:(nullable id)eventsReceiver NS_EXTENSION_UNAVAILABLE("Use method initExtensionWithConfig:withEventsReceiver: for init library in extension");
 
 /**
  * Initialize api for extension with config Notify.config
  * @param eventsReceiver should implement either protocol NTFUnhandledErrorReceiver
  * or NTFMonitoringEventReceiver or both.
  */
-+ (BOOL) initExtensionWithDefaultConfigAndEventsReceiver:(nullable id)eventsReceiver NS_SWIFT_NAME(initExtensionWithDefaultConfig(andEventsReceiver:));
++ (BOOL) initExtensionWithDefaultConfigAndEventsReceiver:(nullable id)eventsReceiver NS_SWIFT_NAME(initExtensionWithDefaultConfig(andEventsReceiver:)) API_AVAILABLE(ios(10.0));
 
 /**
  * Initialize api for extension with custom config
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  * or NTFMonitoringEventReceiver or both.
  */
 + (BOOL) initExtensionWithConfig:(NTFAppConfig *)config
-              withEventsReceiver:(nullable id)eventsReceiver;
+              withEventsReceiver:(nullable id)eventsReceiver API_AVAILABLE(ios(10.0));
 
 @end
 
