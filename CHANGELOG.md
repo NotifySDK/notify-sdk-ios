@@ -51,3 +51,7 @@
 ### Version 1.0.11
 
 * Notify: Hotfix of sending pushstatus
+
+### Version 1.1.0
+
+* Notify: Add inapps

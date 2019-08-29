@@ -1,18 +1,18 @@
 # NotifySDK
 
-Notify SDK is a solution for sending push notifications and authorize users through sms/push/IVR. 
+Notify SDK is a solution for sending push notifications and verify users through sms/push/IVR. 
 
 ## Libraries
 
-There are two independent libraries `Libnotify` and `Libverify`. They are based on common library called `NotifyCore`. Also there is library worked over `Libverify` and called `LibverifyControls`. All libraries are wrapped in dynamic frameworks.  
+There are two independent libraries `Libnotify` and `Libverify`. They are based on a common library called `NotifyCore`. Also there is a library worked over `Libverify` and called `LibverifyControls`. All libraries are wrapped in dynamic frameworks.  
 
 ### Libnotify
 
-Lets you work with push notifications
+Lets you work with push notifications and send events.
 
 ### Libverify
 
-Lets you verify user through Push Notifications to suitable services or through SMS.
+Lets you verify user through Push Notifications or SMS.
 
 ### LibverifyControls
 
@@ -24,24 +24,25 @@ Will be presented soon.
 
 ## Checklist
 
-Items from this list are required for correct integration of libraries to your application:
+Items from this list are required to correct integration of libraries to your application:
 
 ### Common
 
-* enable framework and library(ies) in config
+* enable framework and library(-ies) in config
 
 ### Libnotify
 
-* setup application name in config of Notify.
+* setup application name in config of Notify
 * implement NTFNotifyDelegate protocol and install delegate to `[NTFNotify getInstance]`
 * setup landing colors in config (be carefull, all versions greater than 1.0.6 work with another color scheme and if libnotify is already integrated to application you need to check colors and update them).
-* implement service extension and content extension and enable libnotify inside of these extensions
+* create service extension and add library 'Notify' to it
+* create content extension and add library 'Notify' to it
 
 ### Libverify
 
 * setup application name and application id in config of Verify
-* to test push notifications you can enable flag `useSandbox` in VerifyConfig. This property is setupable only through code and works with enabled debug mode only
-* implement service extension and enable libverify inside of it
+* to test push notifications you can enable flag `useSandbox` in VerifyConfig. This property is setupable only through code and works with enabled debug mode only.
+* create service extension and add library 'Verify' to it
 
 ### LibverifyControls
 
@@ -57,24 +58,29 @@ Items from this list are required for correct integration of libraries to your a
 
 ##### Libnotify
 ```ruby
-pod 'NotifySDK', '1.0.x' # Please input specific version
+pod 'NotifySDK', '1.1.x' # Please input specific version
 ```
 or
 ```ruby
-pod 'NotifySDK/Notify', '1.0.x' # Please input specific version
+pod 'NotifySDK/Notify', '1.1.x' # Please input specific version
 ```
 ##### Libverify with UI Components
 ```ruby
-pod 'NotifySDK/VerifyControls', '1.0.x' # Please input specific version
+pod 'NotifySDK/VerifyControls', '1.1.x' # Please input specific version
 ```
 Or without ones if you want make your custom components
 ```ruby
-pod 'NotifySDK/Verify', '1.0.x' # Please input specific version
+pod 'NotifySDK/Verify', '1.1.x' # Please input specific version
 ```
 
-Run `pod install`.
+##### Install these libraries
 
-##### Open workspace
+* Run `pod install`
+* Open workspace
+
+##### Note
+
+You need to add this libraries to all targets (for 'Notify' it's your app and service extension, and content extension; for 'Verify' it's your app and service extension)
 
 ### Add libraries to project (with Carthage)
 
@@ -145,7 +151,7 @@ Both of our libraries must be configured before usage. The simplest way is make 
 </plist>
 ```
 
-This configuration file must be added to the application bundle.
+This configuration file must be added to the application bundle. Also if you have ServiceExtension or ContentExtension you have to and Notify.plist in the bundle of this extensions as well.
 
 *You can find example* ***Notify.plist*** *in directory with pod or in archive with frameworks.*
 
@@ -202,7 +208,7 @@ We open landing interface in libnotify and message settings interface in libveri
 
 Next recommendations will help you to avoid incorrect behaviour
 
-* Try to don't get access to your main window using method `[[UIApplication sharedApplication] keyWindow]`. For details look at Technical notes above.
+1. Try to don't get access to your main window using method `[[UIApplication sharedApplication] keyWindow]`. For details look at Technical notes above.
 
 ## Requirements
 

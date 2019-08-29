@@ -21,7 +21,7 @@ typedef void (^NTFCallBack)(void);
  * Alias for function that will handle modified content from service extension.
  * */
 API_AVAILABLE(ios(10.0))
-typedef void (^NTFServiceExtensionCallback)(UNNotificationContent * _Nonnull);
+typedef void (^NTFServiceExtensionCallback)(UNNotificationContent *);
 
 /**
  * Alias for callback from AppDelegate
@@ -44,17 +44,19 @@ typedef NS_ENUM(NSInteger, NTFErrorCode)
       NO ERROR.
      */
     NTFEmptyErrorCode = 0,
-    NTFErrorArgumentErrorCode = 1,
-    NTFNetworkCancelledErrorCode = 2,
-    NTFNetworkClientErrorCode = 3,
-    NTFNetworkGeneralErrorCode = 4,
-    NTFNetworkJsonParseErrorCode = 5,
-    NTFNetworkJsonSerializeErrorCode = 6,
-    NTFNetworkIOErrorCode = 7,
-    NTFEventsDbErrorCode = 8,
-    NTFNetworkServerErrorErrorCode = 9,
-    NTFNetworkNoDataToSendErrorCode = 10,
-    NTFUIRenderingErrorErrorCode = 11
+    NTFErrorArgumentErrorCode,
+    NTFNetworkCancelledErrorCode,
+    NTFNetworkClientErrorCode,
+    NTFNetworkGeneralErrorCode,
+    NTFNetworkJsonParseErrorCode,
+    NTFNetworkJsonSerializeErrorCode,
+    NTFNetworkIOErrorCode,
+    NTFEventsDbErrorCode,
+    NTFNetworkServerErrorErrorCode,
+    NTFNetworkNoDataToSendErrorCode,
+    NTFUIRenderingErrorErrorCode,
+    NTFLandingHandlingUnknownMessageTypeErrorCode,
+    NTFLandingHandlingLandingAlreadyPresentedErrorCode,
 };
 
 /*

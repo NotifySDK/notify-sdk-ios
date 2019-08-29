@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/NTFConstants.h</key>
 		<data>
-		ovELmqhmXjsxzrfVndOgQsMdLkA=
+		AsWZEniPJl3sX4s462QLUOcFb+Y=
 		</data>
 		<key>Headers/NTFLogReceiver.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Headers/NTFLogger.h</key>
 		<data>
-		0tloY2cz3I2KyK2SFm5HGyOehWE=
+		9vnG0WzqQo/GxSLj67gCrwwsXAo=
 		</data>
 		<key>Headers/NTFMacros.h</key>
 		<data>
-		K8ZIXetSmP7q5BDgraWO5x40gwI=
+		Z565OsBfwKQatyxBVLANn7ko1KM=
 		</data>
 		<key>Headers/NTFMonitoringEventReceiver.h</key>
 		<data>
@@ -77,11 +77,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ovELmqhmXjsxzrfVndOgQsMdLkA=
+			AsWZEniPJl3sX4s462QLUOcFb+Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Twc39Wc4b9mqmkaJUW+DwbORNpOe74MVrK3wLJCqAA=
+			02xqD6CvLMcMbcOR1XjKp+MdhXBC+eKUD7EjW6Q7rJc=
 			</data>
 		</dict>
 		<key>Headers/NTFLogReceiver.h</key>
@@ -99,22 +99,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0tloY2cz3I2KyK2SFm5HGyOehWE=
+			9vnG0WzqQo/GxSLj67gCrwwsXAo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ArjSmnHER15w7HE1x2gnUycXxaoBTSt00HsWPeFDPbk=
+			Z6Vb1YWtt10qGijaQZ/IFKtYOfmlILXHITJimn/suRE=
 			</data>
 		</dict>
 		<key>Headers/NTFMacros.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K8ZIXetSmP7q5BDgraWO5x40gwI=
+			Z565OsBfwKQatyxBVLANn7ko1KM=
 			</data>
 			<key>hash2</key>
 			<data>
-			FI2dgTX9li2NXfbkFK6sugzglinhSpsZGHR2O/I8ibc=
+			OG5bakopR5BstTtfLpBYC9lNAjXWuWMj5YB8cqKf47o=
 			</data>
 		</dict>
 		<key>Headers/NTFMonitoringEventReceiver.h</key>
