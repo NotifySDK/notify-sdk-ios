@@ -18,11 +18,11 @@
 		</data>
 		<key>Headers/NTFNotify.h</key>
 		<data>
-		UksE+7/jodIwQdwlMgsvre+07k0=
+		JL8o+iaJgXLn5XRQBuzjcgSEPlE=
 		</data>
 		<key>Headers/NTFNotifyApi.h</key>
 		<data>
-		BmBLNqi6eBg8e9mwPb4vJ1knHqA=
+		OeODlwkYeFn432l9hZsYWSn6v6g=
 		</data>
 		<key>Headers/NTFNotifyDelegate.h</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/06A-3k-dkT-view-2k9-6s-Cyf.nib/objects-11.0+.nib</key>
 		<data>
-		Qmm4lNkETVl+JVisFPWecoKYXIo=
+		UfiQwiloabAf2mEhQILoVH5iHwk=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/06A-3k-dkT-view-2k9-6s-Cyf.nib/runtime.nib</key>
 		<data>
-		U7zPfSKFYC6hLxjXp2SKHIC1ceQ=
+		sqEK1iLSsA4rzTNBQcVYtrUlFDY=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/Info.plist</key>
 		<data>
@@ -50,27 +50,27 @@
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UITableViewController-06A-3k-dkT.nib/objects-11.0+.nib</key>
 		<data>
-		f3kdUWse8KtvgLKt5joneZKPgCk=
+		iDCg22mgSoyOwuN0z5wmx0uVpS0=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UITableViewController-06A-3k-dkT.nib/runtime.nib</key>
 		<data>
-		CdbMqiIkqSyuok3Epq+RlenQ59E=
+		vw2j+dikGzyvrpfFPCQbzCH7THo=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UIViewController-pno-NM-fN4.nib/objects-11.0+.nib</key>
 		<data>
-		OmVsPH3zPQ+7RxjzYDzT7u5rKWg=
+		NhHZcuKkDck025f+lsATBbH+jo8=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UIViewController-pno-NM-fN4.nib/runtime.nib</key>
 		<data>
-		ikNmM2fYbPzY113KrdtyUoR5/K8=
+		mXusWRobLHauMWK9cKlZIsR8Oks=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/pno-NM-fN4-view-gLG-lB-1JF.nib/objects-11.0+.nib</key>
 		<data>
-		trF5WVdD73HkHBKVGSpU0OpN5HA=
+		ju4XwgvXkhIi6f9aZ2cFMTHozXo=
 		</data>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/pno-NM-fN4-view-gLG-lB-1JF.nib/runtime.nib</key>
 		<data>
-		SlBg16oobHm9boFU+pStDTPTDLU=
+		tCqpIFIGB3K8SkSoIqkoBa7hqSE=
 		</data>
 		<key>LibnotifyResources.bundle/Landing.storyboardc/Info.plist</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>LibnotifyResources.bundle/Landing.storyboardc/LandingViewController.nib</key>
 		<data>
-		2Pgp+Lyh0MgjI3UIn9xSkHsplpk=
+		LAKzzZkBbwwpkIGbBFQf6kiqobc=
 		</data>
 		<key>LibnotifyResources.bundle/Landing.storyboardc/wcB-cs-nhv-view-aor-9o-EL9.nib</key>
 		<data>
-		lPqYkHtdikMGBGc1q/mTe0oYjMQ=
+		eqjRm2OEEGLJUj0MQxAPxGVkv+A=
 		</data>
 		<key>LibnotifyResources.bundle/close_button.png</key>
 		<data>
@@ -140,22 +140,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UksE+7/jodIwQdwlMgsvre+07k0=
+			JL8o+iaJgXLn5XRQBuzjcgSEPlE=
 			</data>
 			<key>hash2</key>
 			<data>
-			wx4MND/blpQdV55jyhnCwCevdrWm3zQ8a+536hUdf60=
+			MebhUQsHITCzcRjfoi/SBNoBPOiY11K+YUT1ix2ra10=
 			</data>
 		</dict>
 		<key>Headers/NTFNotifyApi.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BmBLNqi6eBg8e9mwPb4vJ1knHqA=
+			OeODlwkYeFn432l9hZsYWSn6v6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			7Mi/GCelvkEFS44cMcKMh3GeRzsmPJ2lJ5JZi0ijikk=
+			CFNESzT96SI42iwt2SFHyo6o0E7p7dxaEOiy1WQtdMI=
 			</data>
 		</dict>
 		<key>Headers/NTFNotifyDelegate.h</key>
@@ -184,22 +184,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Qmm4lNkETVl+JVisFPWecoKYXIo=
+			UfiQwiloabAf2mEhQILoVH5iHwk=
 			</data>
 			<key>hash2</key>
 			<data>
-			oPoXISuq1eAyJi212E8a2IxQtnXuP/afcWkbfrfykCg=
+			bQckEBQIHmSo5PlDkKqTKrqYWfKKarRgpRG4rDAajBo=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/06A-3k-dkT-view-2k9-6s-Cyf.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U7zPfSKFYC6hLxjXp2SKHIC1ceQ=
+			sqEK1iLSsA4rzTNBQcVYtrUlFDY=
 			</data>
 			<key>hash2</key>
 			<data>
-			sHAa/L9wY7xPu5V78V4lA7FysdP2+N+ULlPVL8mRLf4=
+			eDwrRw4BDJSQFjl3CFLYqEbpmRWaPKytrP70Asy7kKQ=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/Info.plist</key>
@@ -217,66 +217,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f3kdUWse8KtvgLKt5joneZKPgCk=
+			iDCg22mgSoyOwuN0z5wmx0uVpS0=
 			</data>
 			<key>hash2</key>
 			<data>
-			pN2w0Pl2FjL8hD+flcYD1hL3drlj/QY9rTUbgqQHqfk=
+			05OtMOC2CiwtU3JCuclteOl0FTWm802BUXVi31UuMng=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UITableViewController-06A-3k-dkT.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CdbMqiIkqSyuok3Epq+RlenQ59E=
+			vw2j+dikGzyvrpfFPCQbzCH7THo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZYqmIxZaSbh/CK44geSKM7d0btycVKK+4FCiS1IHafs=
+			QxWk9VAK6VBxXQ9kc1e7GDcaTQPiWkY/zstNuR093Zs=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UIViewController-pno-NM-fN4.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OmVsPH3zPQ+7RxjzYDzT7u5rKWg=
+			NhHZcuKkDck025f+lsATBbH+jo8=
 			</data>
 			<key>hash2</key>
 			<data>
-			raJS+eZ2k7w1Sc7uD4x7sxPDOuSmdF/qpMVY8dYEdpk=
+			ehuzvfVMR/GC1HgTXd2C41PKSsn2+AyrY7TTdWpeZdY=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/UIViewController-pno-NM-fN4.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ikNmM2fYbPzY113KrdtyUoR5/K8=
+			mXusWRobLHauMWK9cKlZIsR8Oks=
 			</data>
 			<key>hash2</key>
 			<data>
-			fv9hIlSRQoXjcexa5465ILco1BootFzgbPdMF5C7gVk=
+			beIT8IEj/3HH8wnl8cJo8p9DR2PzuqrlkZAuMaH2NPI=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/pno-NM-fN4-view-gLG-lB-1JF.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			trF5WVdD73HkHBKVGSpU0OpN5HA=
+			ju4XwgvXkhIi6f9aZ2cFMTHozXo=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Hpo8OTqjpxpVoysa+IOd55DiCsJpKiv/trrJLvtDkE=
+			cXWI1xUP/Em9mFXgVDbRBWeiqnSX1/A7fqTO6kudFZc=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/DebugSettings.storyboardc/pno-NM-fN4-view-gLG-lB-1JF.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SlBg16oobHm9boFU+pStDTPTDLU=
+			tCqpIFIGB3K8SkSoIqkoBa7hqSE=
 			</data>
 			<key>hash2</key>
 			<data>
-			ncFMBXyKRtgLwBmflzgAQ4U4cuE5Utd47NdrRrBfFcQ=
+			q5MxKB7aQScfV9jINsO8K8UOmBPdQ0kedIiQA9Njlp8=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/Landing.storyboardc/Info.plist</key>
@@ -294,22 +294,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2Pgp+Lyh0MgjI3UIn9xSkHsplpk=
+			LAKzzZkBbwwpkIGbBFQf6kiqobc=
 			</data>
 			<key>hash2</key>
 			<data>
-			mBkdXd7xQqc0yPpgUB1Doxa1eW8E8bbLWVvDxg8avLo=
+			pytZmk0dzuAyjo+aV2IGhnnhDd59VC2lE6E+jBKRkv4=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/Landing.storyboardc/wcB-cs-nhv-view-aor-9o-EL9.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lPqYkHtdikMGBGc1q/mTe0oYjMQ=
+			eqjRm2OEEGLJUj0MQxAPxGVkv+A=
 			</data>
 			<key>hash2</key>
 			<data>
-			dxd1d9ex7BBwlIPyBoV0fGLvp5SLxXYYZcKlIgVRAtM=
+			zB0kEP/RbOrAmxmn1+vDochtnwt/ArWypc8IjRrazIo=
 			</data>
 		</dict>
 		<key>LibnotifyResources.bundle/close_button.png</key>

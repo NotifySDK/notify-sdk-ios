@@ -12,6 +12,8 @@
 @protocol NTFNotifyExtensionApi;
 @protocol NTFContentExtensionDelegate;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Defines first child of {@link NTF_LIBNOTIFY_ROOT_DATA_KEY}, that contains all notification
  * content sent from Notify API.
@@ -23,8 +25,6 @@ NTF_EXTERN NSString *const NTF_LIBNOTIFY_PUSH_DATA_KEY;
  * */
 NTF_EXTERN NSString *const NTF_LIBNOTIFY_ROOT_DATA_KEY;
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface NTFNotify : NSObject
 
 + (instancetype)new NS_UNAVAILABLE;
@@ -33,19 +33,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Returns singleton instance of NTFNotifyApi
  * */
-+(nullable id<NTFNotifyApi>) getInstance;
++(nullable id<NTFNotifyApi>) getInstance NS_EXTENSION_UNAVAILABLE("Use method getExtensionInstance for receiving instance.");
 
 /**
  * Returns singleton NTFNotifyExtensionApi instance. This extension api may be used from an application
  * content or service extensions to enable images in libnotify push notifications and more reliable
  * delivery confirmation logic.
  * */
-+(nullable id<NTFNotifyExtensionApi>) getExtensionInstance;
++(nullable id<NTFNotifyExtensionApi>) getExtensionInstance API_AVAILABLE(ios(10.0));
 
 /**
  * Shows libnotify debug view with buttons to query instance properties.
  * */
-+(void) showDebugSettings;
++(void) showDebugSettings NS_EXTENSION_UNAVAILABLE("This method is available only in host application.");
 
 /**
  * Allows an application content extension to query provided big content (image/video)

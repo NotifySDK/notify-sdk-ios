@@ -55,3 +55,8 @@
 ### Version 1.1.0
 
 * Notify: Add inapps
+
+### Version 1.1.1
+
+* Notify, Verify: Fix pushes on iOS9
+* Notify, Verify: Fix generation push-token from data on iOS13

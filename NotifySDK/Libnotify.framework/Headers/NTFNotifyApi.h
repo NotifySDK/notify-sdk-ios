@@ -46,18 +46,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) setDelegate:(nullable id<NTFNotifyDelegate>)delegate;
 
 /*!
- @deprecated after version 1.0.5
- Set the window level of presentation landing.
- 
- Due to the landing is shown in separate window you may
- want to set the different level of this window. By default
- window level is UIWindowLevelStatusBar - 1.
- 
- @param landingWindowLevel may be any new value or nil if you want to reset this value.
- */
--(void) setLandingWindowLevel:(nullable NSNumber *)landingWindowLevel DEPRECATED_ATTRIBUTE;
-
-/*!
  Works like an alias for a method {@link NTFNotificationApi#collectEvent(NSString, NSObject)}.
  @param key event key
  @param value event value
@@ -218,6 +206,20 @@ NS_ASSUME_NONNULL_BEGIN
  Allows to clear all libnotify cached push notification content.
  */
 -(void) clearCache;
+
+// MARK: - Deprecated methods
+
+/*!
+ @deprecated after version 1.0.5
+ Set the window level of presentation landing.
+
+ Due to the landing is shown in separate window you may
+ want to set the different level of this window. By default
+ window level is UIWindowLevelStatusBar - 1.
+
+ @param landingWindowLevel may be any new value or nil if you want to reset this value.
+ */
+-(void) setLandingWindowLevel:(nullable NSNumber *)landingWindowLevel DEPRECATED_MSG_ATTRIBUTE("use modalWindowLevel in NTFAppConfig instead.");
 
 @end
 

@@ -24,7 +24,7 @@ Will be presented soon.
 
 ## Checklist
 
-Items from this list are required to correct integration of libraries to your application:
+Items from this list are required for correct integration of libraries to your application:
 
 ### Common
 
@@ -58,19 +58,19 @@ Items from this list are required to correct integration of libraries to your ap
 
 ##### Libnotify
 ```ruby
-pod 'NotifySDK', '1.1.x' # Please input specific version
+pod 'NotifySDK', '1.0.x' # Please input specific version
 ```
 or
 ```ruby
-pod 'NotifySDK/Notify', '1.1.x' # Please input specific version
+pod 'NotifySDK/Notify', '1.0.x' # Please input specific version
 ```
 ##### Libverify with UI Components
 ```ruby
-pod 'NotifySDK/VerifyControls', '1.1.x' # Please input specific version
+pod 'NotifySDK/VerifyControls', '1.0.x' # Please input specific version
 ```
 Or without ones if you want make your custom components
 ```ruby
-pod 'NotifySDK/Verify', '1.1.x' # Please input specific version
+pod 'NotifySDK/Verify', '1.0.x' # Please input specific version
 ```
 
 ##### Install these libraries
