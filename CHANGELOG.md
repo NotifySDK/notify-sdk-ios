@@ -60,3 +60,7 @@
 
 * Notify, Verify: Fix pushes on iOS9
 * Notify, Verify: Fix generation push-token from data on iOS13
+
+### Version 1.1.2
+
+* Notify, Verify: Fix crash during push token registration if libnotify or libverify is added to project but isn't initialized. 

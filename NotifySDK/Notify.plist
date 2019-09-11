@@ -26,7 +26,11 @@
             <key>Application</key>
             <dict>
                 <key>Name</key>
-                <string>Notify app name</string>
+                <string>ios-libnotify-app</string>
+                <key>Id</key>
+                <string>Identifier of application</string>
+                <key>Secret</key>
+                <string>Secret key you can get from CRM</string>
             </dict>
         </dict>
         <key>LibVerify</key>
@@ -38,12 +42,12 @@
             <key>Application</key>
             <dict>
                 <key>Name</key>
-                <string>Verify app name</string>
+                <string>ios-libverify-app</string>
                 <key>Key</key>
-                <string>Verify app key</string>
+                <string>stZZBU2Vt8f1tLxM</string>
             </dict>
         </dict>
         <key>SharedGroupId</key>
-        <string>Shared group id</string>
+        <string>group.ru.mail.notify.test</string>
     </dict>
 </plist>
