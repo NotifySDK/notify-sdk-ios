@@ -64,3 +64,7 @@
 ### Version 1.1.2
 
 * Notify, Verify: Fix crash during push token registration if libnotify or libverify is added to project but isn't initialized. 
+
+### Version 1.1.3
+
+* Notify: Fix handling tap to buttons on landing activity.
