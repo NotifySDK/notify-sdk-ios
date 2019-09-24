@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
  If delegate want to implement custom transition for countriesCodesViewController
- Use this method and return NO, after implement your own presentation
+ Use this method and return NO, after implement your own presentation.
  */
 - (BOOL)shouldPresentCountriesCodesViewController:(UIViewController *)viewController;
 

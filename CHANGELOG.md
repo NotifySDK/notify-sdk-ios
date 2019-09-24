@@ -68,3 +68,7 @@
 ### Version 1.1.3
 
 * Notify: Fix handling tap to buttons on landing activity.
+
+### Version 1.1.4
+
+* Notify, Verify: Add support iOS 13.

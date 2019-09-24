@@ -5,9 +5,11 @@
 - (void)phoneCountriesCodesViewController:(nonnull UIViewController *)viewController
                   didSelectCountryISOCode:(nonnull NSString *)code;
 
+- (void)dismissCountriesCodesViewController:(nonnull UIViewController *)viewController;
+
 @end
 
-@interface NTFPhoneCountriesCodesViewController : UIViewController
+@interface NTFPhoneCountriesCodesViewController : UITableViewController
 
 @property (nonatomic, weak, nullable) id<NTFPhoneCountriesCodesViewControllerDelegate> delegate;
 
