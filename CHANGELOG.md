@@ -72,3 +72,7 @@
 ### Version 1.1.4
 
 * Notify, Verify: Add support iOS 13.
+
+### Version 1.1.5
+
+* Verify: Add support mobileId

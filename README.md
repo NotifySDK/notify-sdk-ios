@@ -32,7 +32,7 @@ Items from this list are required for correct integration of libraries to your a
 
 ### Libnotify
 
-* setup application name in config of Notify
+* setup application name, application identifier, and application secret in config of Notify
 * implement NTFNotifyDelegate protocol and install delegate to `[NTFNotify getInstance]`
 * setup landing colors in config (be carefull, all versions greater than 1.0.6 work with another color scheme and if libnotify is already integrated to application you need to check colors and update them).
 * create service extension and add library 'Notify' to it
@@ -58,19 +58,19 @@ Items from this list are required for correct integration of libraries to your a
 
 ##### Libnotify
 ```ruby
-pod 'NotifySDK', '1.0.x' # Please input specific version
+pod 'NotifySDK', 'x.x.x' # Please input specific version
 ```
 or
 ```ruby
-pod 'NotifySDK/Notify', '1.0.x' # Please input specific version
+pod 'NotifySDK/Notify', 'x.x.x' # Please input specific version
 ```
 ##### Libverify with UI Components
 ```ruby
-pod 'NotifySDK/VerifyControls', '1.0.x' # Please input specific version
+pod 'NotifySDK/VerifyControls', 'x.x.x' # Please input specific version
 ```
 Or without ones if you want make your custom components
 ```ruby
-pod 'NotifySDK/Verify', '1.0.x' # Please input specific version
+pod 'NotifySDK/Verify', 'x.x.x' # Please input specific version
 ```
 
 ##### Install these libraries
@@ -128,7 +128,11 @@ Both of our libraries must be configured before usage. The simplest way is make 
             <key>Application</key><!-- Libnotify parameters -->
             <dict>
                 <key>Name</key><!-- Name of application -->
-                <string>ios-libnotify-app</string>
+                <string>application name</string>
+                <key>Id</key><!-- Identifier of application -->
+                <string>application id</string>
+                <key>Secret</key><!-- Secret of application -->
+                <string>application secret</string>
             </dict>
         </dict>
         <key>LibVerify</key><!-- Configuration of Libverify -->
@@ -140,13 +144,13 @@ Both of our libraries must be configured before usage. The simplest way is make 
             <key>Application</key><!-- Libverify parameters -->
             <dict>
                 <key>Name</key>
-                <string>ios-libverify-app</string><!-- Application name -->
+                <string>application name</string><!-- Application name -->
                 <key>Key</key>
-                <string>stZZBU2Vt8f1tLxM</string><!-- Application key -->
+                <string>application secret</string><!-- Application key -->
             </dict>
         </dict>
         <key>SharedGroupId</key><!-- Shared group ID. You have to copy group identifier from Entitlements -->
-        <string>group.ru.mail.notify.test</string>
+        <string>shared group identifier</string>
     </dict>
 </plist>
 ```
