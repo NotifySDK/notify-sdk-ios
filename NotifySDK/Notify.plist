@@ -26,7 +26,7 @@
             <key>Application</key>
             <dict>
                 <key>Name</key>
-                <string>Application name</string>
+                <string>ios-libnotify-app</string>
                 <key>Id</key>
                 <string>Identifier of application</string>
                 <key>Secret</key>
@@ -42,12 +42,12 @@
             <key>Application</key>
             <dict>
                 <key>Name</key>
-                <string>Application name</string>
+                <string>ios-libverify-app</string>
                 <key>Key</key>
-                <string>Application key</string>
+                <string>stZZBU2Vt8f1tLxM</string>
             </dict>
         </dict>
         <key>SharedGroupId</key>
-        <string>Shared group id</string>
+        <string>group.ru.mail.notify.test</string>
     </dict>
 </plist>

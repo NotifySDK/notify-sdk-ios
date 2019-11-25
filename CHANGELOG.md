@@ -76,3 +76,7 @@
 ### Version 1.1.5
 
 * Verify: Add support mobileId
+
+### Version 1.1.6
+
+* Verify: Internal improves to support mobileId
