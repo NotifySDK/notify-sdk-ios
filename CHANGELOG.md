@@ -80,3 +80,10 @@
 ### Version 1.1.6
 
 * Verify: Internal improves to support mobileId
+
+### Version 1.1.7
+
+* Notify: Add properties to events.
+* Notify, Verify: Fix header User-Agent in the libraries' requests.
+* Notify: Fix handling landings.
+* Notify: Change time of send event AppFirstLaunch.
