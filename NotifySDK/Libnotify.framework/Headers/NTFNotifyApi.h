@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIApplication.h>
 
+#import <Libnotify/NTFNotifyEventsCollector.h>
+
 /*!
  States for notifications
 
@@ -24,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  lightweight as possible and asynchronous as well. So, they can be called from an arbitrary
  application thread, including <b>MainThread</b>.
  */
-@protocol NTFNotifyApi <NSObject>
+@protocol NTFNotifyApi <NTFNotifyEventsCollector>
 
 /*!
  Allows to bind some user id to a particular libnotify (application) instance, which could
@@ -44,128 +46,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param delegate Object that will handle various events from libnotify
  */
 -(void) setDelegate:(nullable id<NTFNotifyDelegate>)delegate;
-
-/*!
- Works like an alias for a method {@link NTFNotificationApi#collectEvent(NSString, NSObject)}.
- @param key event key
- @param value event value
- */
--(void) collectEvent:(NSString *) key withValue:(NSString *) value;
-
-/*!
- Works as method {@link NTFNotificationApi#collectEvent(NSString, NSString)}, but allows to
- an application deliver collected events as soon as possible.
- @param key event key
- @param value event value
- @param deliverImmediately YES - if an application wishes to deliver this event as soon as possible,
- NO - otherwise
- */
--(void) collectEvent:(NSString *) key
-           withValue:(NSString *) value
-  withImmediateLogic:(BOOL) deliverImmediately;
-
-/*!
- Collects single event without a value
- @param key event key
- */
--(void) collectEvent:(NSString *) key;
-
-/*!
- Works as method {@link NTFNotificationApi#collectEvent(NSString)}, but allows to
- an application deliver collected events as soon as possible.
- @param key event key
- @param deliverImmediately YES - if an application wishes to deliver this event as soon as possible,
- NO - otherwise
- */
--(void) collectEvent:(NSString *) key
-  withImmediateLogic:(BOOL) deliverImmediately;
-
-/*!
- Collects single event with a value. Value could could have any type and in most cases
- it will be turned into <b>NSString</b> and passed into libnotify API, but there are some
- important corner cases. If the value of type <b>NSNumber</b> passed into
- this (or other interface) method, libnotify will accumulate it's values and pass into libnotify API
- an aggregated value.
-
- For instance:
- @code
- NTFNotificationApi.collectEvent(@"test", @(1));
- NTFNotificationApi.collectEvent(@"test", @(2));
- NTFNotificationApi.collectEvent(@"test", @(3));
- @endcode
-
- The call sequence above will result in libnotify call with something like:
- @code
- {
- "name" : "test",
- "count" : 3,
- "first_timestamp" : 123123123,
- "last_timestamp" : 2131231231,
- "max" : 3,
- "min" : 1,
- "sum" : 6
- }
- @endcode
-
- This is really useful if you want to use some time or performance metrics to segment
- your application auditory into slices.
-
- Another case:
-
- @code
- NTFNotificationApi.collectEvent(@"test", @"some");
- NTFNotificationApi.collectEvent(@"test", @"some");
- NTFNotificationApi.collectEvent(@"test", @"some");
- @endcode
-
- The call sequence above will result in libnotify call with something like:
-
- @code
- {
- "name" : "test",
- "value" : "some"
- "count" : 3,
- "first_timestamp" : 123123123,
- "last_timestamp" : 2131231231
- }
- @endcode
-
- Thus, libnotify uses internal logic for gluing events that has been produced originated
- in some short period of time, which allows decrease client to server traffic
- and increase server throughput.
- @param key event key
- @param value event value
- */
--(void) collectEvent:(NSString *) key withValueObject:(NSObject *) value;
-
-/*!
- Works as method {@link NTFNotificationApi#collectEvent(NSString, NSObject)}, but allows to
- an application deliver collected events as soon as possible.
- @param key event key
- @param value event value
- @param deliverImmediately YES - if an application wishes to deliver this event as soon as possible,
- NO - otherwise
- */
--(void) collectEvent:(NSString *) key
-     withValueObject:(NSObject *) value
-  withImmediateLogic:(BOOL) deliverImmediately;
-
-/*!
- Collects multiple events in a single method call. It is preferable way to deliver several
- events with some values to libnotify SDK.
- @param mapping between event name and it's value
- */
--(void) collectEventMap:(NSDictionary<NSString *, NSObject *> *) mapping;
-
-/*!
- Works as method {@link NTFNotificationApi#collectEvent(NSDictionary)}, but allows to
- an application deliver collected events as soon as possible.
- @param mapping between event name and it's value
- @param deliverImmediately YES - if an application wishes to deliver this event as soon as possible,
- NO - otherwise
- */
--(void) collectEventMap:(NSDictionary<NSString *, NSObject *> *) mapping
-     withImmediateLogic:(BOOL) deliverImmediately;
 
 /*!
  Sets named property for this particular instance. Unlike events collected using
