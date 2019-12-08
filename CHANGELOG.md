@@ -1,16 +1,18 @@
-### Version 1.0.3
+# Changelog
+
+## Version 1.0.3
 
 * Move to Cocoapods
 
-### Version 1.0.4
+## Version 1.0.4
 
 * Move to frameworks
 
-### Version 1.0.5
+## Version 1.0.5
 
 * Few fixes
 
-### Version 1.0.6
+## Version 1.0.6
 
 * Libnotify: Fix crash appeared on reset userId
 * Libnotify: Delegate opening main interface to application developers through protocol `NTFNotifyDelegate`
@@ -21,69 +23,75 @@
 * Libverify: Fix API for better support swift
 * Libverify: Open push settings in separate window
 
-### Version 1.0.7
+## Version 1.0.7
 
 * Notify: Add redesign of landing
 * Notify: Handle landing colors received from APNS pushes
 * Notify: User can disable sending APNS pushes
-* Notify: Fix bug when instanceId remain nonsended to server 
+* Notify: Fix bug when instanceId remain nonsended to server
 * Notify: Sending field `last_user_id` from extensions
 * Verify: Developers can change librarie's language. It will be used for SMS
 * Verify: Add support 13 languages
 * Verify: Fix of lost instance_id
-* Verify: Add support of ServiceExtension.
-* Verify: Changing public API.
-* Verify: Add support to enable sandbox.
-* VerifyControls: Developer can change language of `NTFPhoneFormatter`.
+* Verify: Add support of ServiceExtension
+* Verify: Changing public API
+* Verify: Add support to enable sandbox
+* VerifyControls: Developer can change language of `NTFPhoneFormatter`
 
-### Version 1.0.8
+## Version 1.0.8
 
 * VerifyControls: Hotfix of NTFPhoneFormatter
 
-### Version 1.0.9
+## Version 1.0.9
 
 * Internal changes
 
-### Version 1.0.10
+## Version 1.0.10
 
 * Notify: Hotfix of content extensions
 
-### Version 1.0.11
+## Version 1.0.11
 
 * Notify: Hotfix of sending pushstatus
 
-### Version 1.1.0
+## Version 1.1.0
 
 * Notify: Add inapps
 
-### Version 1.1.1
+## Version 1.1.1
 
 * Notify, Verify: Fix pushes on iOS9
 * Notify, Verify: Fix generation push-token from data on iOS13
 
-### Version 1.1.2
+## Version 1.1.2
 
-* Notify, Verify: Fix crash during push token registration if libnotify or libverify is added to project but isn't initialized. 
+* Notify, Verify: Fix crash during push token registration if libnotify or libverify is added to project but isn't initialized
 
-### Version 1.1.3
+## Version 1.1.3
 
-* Notify: Fix handling tap to buttons on landing activity.
+* Notify: Fix handling tap to buttons on landing activity
 
-### Version 1.1.4
+## Version 1.1.4
 
-* Notify, Verify: Add support iOS 13.
+* Notify, Verify: Add support iOS 13
 
-### Version 1.1.5
+## Version 1.1.5
 
 * Verify: Add support mobileId
 
-### Version 1.1.6
+## Version 1.1.6
 
 * Verify: Internal improves to support mobileId
 
-### Version 1.1.7
+## Version 1.1.7
 
-* Notify: Add properties to events.
-* Notify, Verify: Fix header User-Agent in the libraries' requests.
-* Notify: Fix handling landings.
-* Notify: Change time of send event AppFirstLaunch.
+* Notify: Add properties to events
+* Notify, Verify: Fix header User-Agent in the libraries' requests
+* Notify: Fix handling landings
+* Notify: Change time of send event AppFirstLaunch
+
+## Version 1.1.8
+
+* Notify: Fix opening deeplinks from activity
+* Notify: Fix fonts in activity
+* Notify: Fix sending events from extensions
