@@ -95,3 +95,9 @@
 * Notify: Fix opening deeplinks from activity
 * Notify: Fix fonts in activity
 * Notify: Fix sending events from extensions
+
+## Version 1.1.9
+
+* Notify: Fix fonts and colors of landing with type **Activity**.
+* Verify: Add total sign out. Now you can reset all instances at once.
+* VerifyControls: Fix bug in PhoneFormatter. Sometimes user received incorrect phone number info during fast editing the phone number.

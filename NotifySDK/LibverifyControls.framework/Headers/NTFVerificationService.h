@@ -166,6 +166,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)softSignOut;
 
 /**
+* {@link NTFVerifyApi#signOut(Bool)}
+*/
+- (void)signOut:(bool)dropAllInstances;
+
+/**
  * {@link NTFVerifyApi#resetVerificationCodeError(String)}
  */
 - (void)resetVerificationCode;

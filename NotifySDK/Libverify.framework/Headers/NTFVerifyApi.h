@@ -86,7 +86,6 @@ The most part of other {@link VerificationApi} functions use this id as a mandat
  Note that, it is less secure than {@link VerificationApi#signOut}}, but more preferable considering
  conversion and efficiency reasons. So, each client application should decide which sign out policy
  is suitable for it.
- Note, that the preferable way to call this method is through {@link VerificationFactory#softSignOut}.
  */
 -(void) softSignOut;
 
@@ -96,7 +95,6 @@ The most part of other {@link VerificationApi} functions use this id as a mandat
  all instances across all user devices. This method must be called during an application sign out process,
  which was initiated by a user, to prevent receiving verification code from other applications, installed on a
  device.
- Note, that the preferable way to call this method is through {@link VerificationFactory#signOut}.
  @param dropAllInstances if true - all libverify instances verified on the same phone number (like this particular
  instance) will be unverified, otherwise - this device bound instances only will lose their verification
  */
