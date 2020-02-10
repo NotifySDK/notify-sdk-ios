@@ -101,3 +101,13 @@
 * Notify: Fix fonts and colors of landing with type **Activity**.
 * Verify: Add total sign out. Now you can reset all instances at once.
 * VerifyControls: Fix bug in PhoneFormatter. Sometimes user received incorrect phone number info during fast editing the phone number.
+
+## Version 1.1.10
+
+* Notify: Add GDPR support.
+* Notify: Add internal event to receiving error during registration to remote notifications.
+* Notify: Add internal event to unregistering to remote notificatins.
+* Notify: Add support to custom handling incomig url from apinotify.
+* Notify: Rename value of event NotifyMessageStateChanged from WAITING to WAITING_FOR_CONTENT_AND_EVENT.
+* Notify: Fix process of update inapps.
+* Notify: Fix handling tap to button in inapps.

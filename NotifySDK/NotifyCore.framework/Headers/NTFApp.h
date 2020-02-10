@@ -170,6 +170,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void) applicationDidRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 
 /**
+ Handle error received during registering push token. Sends internal notify event GcmTokenFailure.
+ @param error received error.
+ */
++ (void) applicationDidFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
+
+/**
  * With this method library could control whether it should show a notification if an application
  * currently in foreground mode.
  * @param center notification center object
@@ -184,6 +190,15 @@ NS_ASSUME_NONNULL_BEGIN
 +(NTFWillPresentNotificationResult)userNotificationCenter:(UNUserNotificationCenter *)center
                                   willPresentNotification:(UNNotification *)notification
                                     withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler API_AVAILABLE(ios(10.0));
+
+/**
+ This method sends a notify internal event UnregisterGcmToken to server.
+ It's an assistant method to -[UIApplication unregisterForRemoteNotifications].
+ By default this method is called by internal category of UIApplication.
+ You have to call this method after calling method -[UIApplication unregisterForRemoteNotifications] if you have disabled method swizzling.
+ If swizzling is enabled call of this method will be ignored.
+ */
++(void) unregisterForRemoteNotifications;
 
 #pragma mark - Service extension methods
 

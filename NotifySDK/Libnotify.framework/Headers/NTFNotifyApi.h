@@ -2,6 +2,7 @@
 #import <UIKit/UIApplication.h>
 
 #import <Libnotify/NTFNotifyEventsCollector.h>
+#import <Libnotify/NTFNotifyGDPRSupport.h>
 
 /*!
  States for notifications
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  lightweight as possible and asynchronous as well. So, they can be called from an arbitrary
  application thread, including <b>MainThread</b>.
  */
-@protocol NTFNotifyApi <NTFNotifyEventsCollector>
+@protocol NTFNotifyApi <NTFNotifyEventsCollector, NTFNotifyGDPRSupport>
 
 /*!
  Allows to bind some user id to a particular libnotify (application) instance, which could
