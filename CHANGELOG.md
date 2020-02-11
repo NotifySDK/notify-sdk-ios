@@ -111,3 +111,7 @@
 * Notify: Rename value of event NotifyMessageStateChanged from WAITING to WAITING_FOR_CONTENT_AND_EVENT.
 * Notify: Fix process of update inapps.
 * Notify: Fix handling tap to button in inapps.
+
+## Version 1.1.11
+
+* Notify: Fix InApps.

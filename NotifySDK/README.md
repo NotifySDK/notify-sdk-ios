@@ -179,6 +179,12 @@ Methods `[NTFApp initWithConfig:withEventsReceiver:]` and `[NTFApp initExtension
 
 **After initialize framework you cannot change configuration**
 
+#### Features
+
+##### GDRP
+
+Libnotify supports GDPR. You can enable or disable sending VendorID and WiFi information to server. To configure GDPR you need use `-[[NTFNotify getInstance] setDeviceIdTrackingEnabled:boolValue]`
+
 #### Tips
 
 * If you want to use few configurations you may create configuration files for each configuration, load required with `[NTFAppConfig initWithConfig:]` and initialize framework with this configuration. 
