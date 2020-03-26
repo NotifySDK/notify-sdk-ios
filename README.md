@@ -1,18 +1,18 @@
 # NotifySDK
 
-Notify SDK is a solution for sending push notifications and verify users through sms/push/IVR. 
+Notify SDK is a solution for sending push notifications and verify user's phone number through sms/push/IVR.
 
 ## Libraries
 
-There are two independent libraries `Libnotify` and `Libverify`. They are based on a common library called `NotifyCore`. Also there is a library worked over `Libverify` and called `LibverifyControls`. All libraries are wrapped in dynamic frameworks.  
+There are two independent libraries `Libnotify` and `Libverify`. They are based on a core library called `NotifyCore`. Also there is a library worked over `Libverify` and called `LibverifyControls`. All libraries are wrapped in dynamic frameworks.
 
 ### Libnotify
 
-Lets you work with push notifications and send events.
+Lets you work with push notifications and send events. Developed for integration to main application, to ServiceExtension and to ContentExtension. 
 
 ### Libverify
 
-Lets you verify user through Push Notifications or SMS.
+Lets you verify user through Push Notifications or SMS. Developed for integration to main application and to ServiceExtension.
 
 ### LibverifyControls
 
@@ -29,12 +29,13 @@ Items from this list are required for correct integration of libraries to your a
 ### Common
 
 * enable framework and library(-ies) in config
+* enable Debug-mode to receive debug-information (but don't forget to disable Debug-mode in the release)
 
 ### Libnotify
 
-* setup application name, application identifier, and application secret in config of Notify
+* setup application identifier, and application secret in config of Notify (application name is obsoleted)
 * implement NTFNotifyDelegate protocol and install delegate to `[NTFNotify getInstance]`
-* setup landing colors in config (be carefull, all versions greater than 1.0.6 work with another color scheme and if libnotify is already integrated to application you need to check colors and update them).
+* configure activity (read 'Activity Settings')
 * create service extension and add library 'Notify' to it
 * create content extension and add library 'Notify' to it
 
@@ -95,6 +96,9 @@ Will be soon.
 
 ### Configuration
 
+You can configure NotifySDK from code or creating config file in plist format. Under the hood library works with instance of NTFAppConfig.
+Before initialization you can change this config.  But after initialization library reads current state and doesn't observe any changes.
+
 #### Make config with Notify.plist
 
 Both of our libraries must be configured before usage. The simplest way is make file Notify.plist. This file lets configure three parts: core (common properties), notify, verify.
@@ -110,7 +114,59 @@ Both of our libraries must be configured before usage. The simplest way is make 
         <true/>
         <key>LibNotify</key><!-- Configuration of Libnotify -->
         <dict>
-            <key>Landing</key><!-- Configuration of landing page -->
+            <key>Activity</key><!-- Configuration of activity in libnotify -->
+            <dict>
+                <key>Colors</key>
+                <dict>
+                    <key>DarkModeSupported</key><!-- Whether library should configure activity for dark mode or not -->
+                    <true/>
+                    <key>BackgroundColor</key>
+                    <dict>
+                        <key>Light</key>
+                        <string>#70D05A</string>
+                        <key>Dark</key>
+                        <string>#70D05A</string>
+                    </dict>
+                    <key>TextColor</key>
+                    <dict>
+                        <key>Light</key>
+                        <string>#70D05A</string>
+                        <key>Dark</key>
+                        <string>#70D05A</string>
+                    </dict>
+                    <key>AccentColor</key>
+                    <dict>
+                        <key>Light</key>
+                        <string>#70D05A</string>
+                        <key>Dark</key>
+                        <string>#70D05A</string>
+                    </dict>
+                    <key>ButtonTextColor</key>
+                    <dict>
+                        <key>Light</key>
+                        <string>#70D05A</string>
+                        <key>Dark</key>
+                        <string>#70D05A</string>
+                    </dict>
+                    <key>CloseButtonColor</key>
+                    <dict>
+                        <key>Light</key>
+                        <string>#70D05A</string>
+                        <key>Dark</key>
+                        <string>#70D05A</string>
+                    </dict>
+                </dict>
+                <!-- 
+                    You can configure library to use custom fonts or dynamic fonts:
+                        Static - enables default fonts and doesn't observe changes in system settings
+                        Dynamic - uses default fonts as base font and changes size of font according to system settings
+                        Custom - library asks fonts from host application. Library observes system settings and asks new fonts on change them.
+                    Default fonts and their sizes you can find in notify library headers.
+                -->
+                <key>FontType</key>
+                <string>Static</string>
+            </dict>
+            <key>Landing</key><!-- Obsolete! Configuration of landing page -->
             <dict>
                 <key>CloseButtonColor</key><!-- Color of button key -->
                 <string>#70D05A</string>
@@ -155,11 +211,11 @@ Both of our libraries must be configured before usage. The simplest way is make 
 </plist>
 ```
 
-This configuration file must be added to the application bundle. Also if you have ServiceExtension or ContentExtension you have to and Notify.plist in the bundle of this extensions as well.
+This configuration file must be added to the application bundle. If you have ServiceExtension or ContentExtension you have to add Notify.plist to the bundle of this extensions as well.
 
 *You can find example* ***Notify.plist*** *in directory with pod or in archive with frameworks.*
 
-*Few properties you can setup through code only. It was made for critical properties that are dangerous and require more attention.*
+*Some properties can be setup through code only. It was made for critical properties that are dangerous and require more attention.*
 
 #### Other ways
 
@@ -198,6 +254,18 @@ If you configure libnotify for work in main application (not in extension) you h
 
 It lets you handle some messages from libnotify including opening main interface for user. We can get corresponding request from user but we cannot predict the structure of your application.
 
+#### Features
+
+##### Dark-mode support
+
+Library Notify can work with dark mode. If your application supports dark-mode you can enable property **activitySettings.colorSettings.darkModeSupported**. But please don't forget configure right colors.
+
+##### Dynamic font support
+
+Library allows to configure fonts in activity. You can use static fonts (by default), use dynamic fonts based on system fonts or you can configure custom fonts.
+To do this you have to set property **activitySettings.fontType** to **Custom** and implement few methods in NotifyDelegate. 
+After that library will asks fonts from your application. Also library observes changes in system settings and asks right fonts every time system settings changed. 
+
 ### Localization
 
 #### Libverify
@@ -212,7 +280,7 @@ You can implement method `configureCountriesCodesViewController:` of `NTFPhoneFo
 
 ### Modal interfaces
 
-We open landing interface in libnotify and message settings interface in libverify in separate window. It helps us present requires interfaces without mix with UIViewController stack of main application. But we mark our windows as key if it needed. Due to this circumstance you can get invalid behaviour if you try to find main window of your application with `keyWindow` method.
+We open landing interface in libnotify and message settings interface in libverify in separate window. It helps us present required interfaces saving view controllers stack of main application. But sometimes we mark our window as key. Due to this circumstance you can get invalid behaviour if you try to find main window of your application with `keyWindow` method.
 
 ## Attention
 

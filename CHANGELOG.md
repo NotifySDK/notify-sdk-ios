@@ -115,3 +115,10 @@
 ## Version 1.1.11
 
 * Notify: Fix InApps.
+
+## Version 1.2.0
+
+* Notify: Add event NotifyMessageDismissed for remote pushes removed from Notification Center.
+* Notify: Add event NotifyMessageRedirected to open links from activity.
+* Notify: Add support dark-mode to Activity
+* Notify: Add support custom and dynamic fonts to Activity.
