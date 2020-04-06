@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 
+#import <Libverify/NTFVerifyApi.h>
 #import <Libverify/NTFVerifyConstants.h>
 
 typedef NS_ENUM(NSInteger, NTFVerificationStep) {
@@ -64,6 +65,15 @@ NS_ASSUME_NONNULL_BEGIN
                       state:(NTFVerifyStateDescriptor *)state;
 
 /**
+ * Notify that call for call-ui request completed
+ * @param success Indicates if request was successful
+ * @param state Actual state of verification process
+ */
+- (void)verificationService:(NTFVerificationService *)service
+     requestCallUICompleted:(BOOL)success
+                      state:(NTFVerifyStateDescriptor *)state;
+
+/**
  * Notify that actual state of verification process changed
  * @param state Actual state of verification process
  */
@@ -97,10 +107,12 @@ NS_ASSUME_NONNULL_BEGIN
  * Returns a state of the verification process.
  */
 @property(nonatomic, readonly, nullable) NTFVerifyStateDescriptor *state;
+
 /**
  * Returns date when ivr call should be enabled.
  */
 @property(nonatomic, readonly, nullable) NSDate *ivrUnblockTimeout;
+
 /**
  * Returns required verification code length.
  */
@@ -132,6 +144,16 @@ NS_ASSUME_NONNULL_BEGIN
  * All results of verification will be delivered via NTFVerificationServiceDelegate
  */
 - (void)requestVerificationCodeForPhone:(NSString *)phoneNumber;
+
+/**
+ * Validate phone number and request verification code
+ * @param phoneNumber phone number entered by user (no format restrictions)
+ * @param verificationMethod allows user to select route to send verification code.
+ * All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestVerificationCodeForPhone:(NSString *)phoneNumber
+                 withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
+
 /**
  * Request new verification code for phone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
  * All results of verification will be delivered via NTFVerificationServiceDelegate
@@ -143,11 +165,18 @@ NS_ASSUME_NONNULL_BEGIN
  * All results of verification will be delivered via NTFVerificationServiceDelegate
  */
 - (void)verifyCode:(NSString *)code;
+
 /**
  * Request automatic ivr call to phone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
  * All results of verification will be delivered via NTFVerificationServiceDelegate
  */
 - (void)requestIvrCall;
+
+/**
+ * Request call to thone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
+ * All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestCallUI;
 
 /**
  * Cancels verification process asynchronously. It's important to remove a subscription.
@@ -166,8 +195,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)softSignOut;
 
 /**
-* {@link NTFVerifyApi#signOut(Bool)}
-*/
+ * {@link NTFVerifyApi#signOut(Bool)}
+ */
 - (void)signOut:(bool)dropAllInstances;
 
 /**

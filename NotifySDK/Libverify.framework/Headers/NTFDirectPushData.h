@@ -2,9 +2,9 @@
 
 #import <NotifyCore/NTFConstants.h>
 
-NTF_EXTERN NSString *const LIBVERIFY_DIRECT_PUSH_RECEIVED;
-
 NS_ASSUME_NONNULL_BEGIN
+
+NTF_EXTERN NSString * const LIBVERIFY_DIRECT_PUSH_RECEIVED;
 
 /**
  Push notification data container. An application should subscribe for LIBVERIFY_DIRECT_PUSH_RECEIVED event

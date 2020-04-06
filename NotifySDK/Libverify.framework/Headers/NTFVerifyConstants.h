@@ -69,6 +69,8 @@ typedef NS_ENUM(NSInteger, NTFVerificationFailReason) {
      * before raising an error. Talking about second phase, originated from {@link VerificationApi#verifySmsCode}
      * method, libverify will wait for internet connection infinitely until
      * {@link VerificationApi#cancelVerification} method call.
+     * From dictionary userInfo you can get more information about network error.
+     * To get error description check key NTFVerifyStateDescriptorUserInfoKeyNetworkError.
      * */
     NTFVerificationFailReasonNetworkError = 6,
     /**

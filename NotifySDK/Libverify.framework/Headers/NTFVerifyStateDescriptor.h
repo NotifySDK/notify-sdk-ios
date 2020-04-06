@@ -7,6 +7,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, NTFVerifyStateDescriptorRateLimitType) {
+    NTFVerifyStateDescriptorRateLimitTypeUnknown,
+    NTFVerifyStateDescriptorRateLimitTypeVerify,
+    NTFVerifyStateDescriptorRateLimitTypeAttempt,
+};
+
+typedef NSString * NTFVerifyStateDescriptorUserInfoKey NS_STRING_ENUM;
+
+/**
+ If descriptor's state is NTFVerificationStateFailed and reason is NTFVerificationFailReasonNetworkError
+ userInfo object can contain string describing type of network error by this key. String may be a name of NSURLError if
+ error received from apple network stack.
+*/
+extern NTFVerifyStateDescriptorUserInfoKey const NTFVerifyStateDescriptorUserInfoKeyNetworkError;
+
+/**
+ This key are presented in the object NTFVerifyStateDescriptor in property `userInfo` if limit of attempts to validate phone number or verification code are reached .
+ If you want to know which kind of request generates descriptor with state `NTFVerificationStateFailed` and with reason `NTFVerificationFailReasonRatelimit` you can check userInfo.
+ Value by this key is a NSNumber with NTFVerifyStateDescriptorRateLimitType.
+ */
+extern NTFVerifyStateDescriptorUserInfoKey const NTFVerifyStateDescriptorUserInfoKeyRateLimitType;
+
 /**
  * Describes current verification session state.
  * */
@@ -23,6 +45,10 @@ NS_ASSUME_NONNULL_BEGIN
  * Returns error reason, otherwise - {@link VerificationApi.FailReason#OK}
  * */
 @property(nonatomic, readonly, assign) NTFVerificationFailReason reason;
+/**
+ This property contains additional info about state. You can find list of supported keys above.
+ */
+@property (nonatomic, readonly, strong, nullable) NSDictionary<NTFVerifyStateDescriptorUserInfoKey, NSObject<NSCoding> *> * userInfo;
 /**
  * Returns localized text description when an obtained from {@link VerificationStateDescriptor#getReason()}
  * value is not equal to {@link FailReason#OK}. This text could be shown in UI to provide a user with detailed
@@ -69,25 +95,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
-
-- (instancetype)init:(NTFVerificationState)state
-              source:(NTFVerificationSource)source
-              reason:(NTFVerificationFailReason)reason
-   userVisibleReason:(nullable NSString *) userVisibleReason
-        verifiedOnce:(BOOL)verifiedOnce
- modifiedPhoneNumber:(nullable NSString *)modifiedPhoneNumber
-               token:(nullable NSString *)token
-tokenExpirationTimeoutSec:(NSUInteger)tokenExpirationTimeoutSec
-         smsCodeInfo:(nullable NTFSmsCodeInfo *)smsCodeInfo
-             ivrInfo:(nullable NTFIvrInfo *)ivrInfo;
-
-- (instancetype)initWithReason:(NTFVerificationState)state
-                        reason:(NTFVerificationFailReason)reason
-             userVisibleReason:userVisibleReason
-                  verifiedOnce:(bool)verifiedOnce;
-
-- (instancetype)initDefault:(NTFVerificationState)state
-               verifiedOnce:(bool)verifiedOnce;
 
 @end
 

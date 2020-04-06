@@ -3,6 +3,13 @@
 #import <Libverify/NTFVerifyConstants.h>
 #import <Libverify/NTFVerifyCallbacks.h>
 
+typedef NS_ENUM(NSUInteger, NTFVerifyApiVerificationMethod) {
+    NTFVerifyApiVerificationTypeSms,
+    NTFVerifyApiVerificationTypePush,
+    NTFVerifyApiVerificationTypeCallUI,
+    NTFVerifyApiVerificationTypeIvr,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 /*!
  {@link VerificationApi} is the main libverify interface which provides all basic functionality
@@ -18,14 +25,27 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, null_resettable) NSString * currentLanguage;
 
 /*!
-@param verificationService variation service for a target backend (e.g icq_registration)
-@param userProvidedPhoneNumber phone number entered by user (no format restrictions)
-Note that, the provided mapping is valid only for passed in verificationService argument service name.
-@return verification session id, which should be stored in client application during verification process.
-The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
-*/
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userProvidedPhoneNumber phone number entered by user (no format restrictions)
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
 -(NSString *) startVerification:(NSString *) verificationService
                       withPhone:(NSString *) userProvidedPhoneNumber;
+
+/*!
+ This method is very similar to the method `startVerification:withPhone:` but this method allows application select only one method to verify phone number.
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userProvidedPhoneNumber phone number entered by user (no format restrictions)
+ @param verificationMethod is the only method will be used to verify phone number
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
+-(NSString *) startVerification:(NSString *) verificationService
+                      withPhone:(NSString *) userProvidedPhoneNumber
+         withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
 
 /*!
  Cancels verification process asynchronously. It's important to remove a subscription
@@ -122,6 +142,20 @@ The most part of other {@link VerificationApi} functions use this id as a mandat
                withListener:(id<NTFIvrStateListener>) listener;
 
 /*!
+ Call-UI - it's a type of verification when user receives incoming phone call and have to use tail of incoming number as a verification code.
+ Requests phone call asynchronously. Note, that you should implement UI visible timer
+ ({@link VerificationStateDescriptor.IvrInfo#ivrTimeoutSec} - initial timer value) before enabling button,
+ which forces this function call. It is supposed, that timer countdown starts when application firstly receives
+ {@link VerificationState#WAITING_FOR_SMS_CODE} state. After pressing on the button, you should also block it
+ and restart the timer for the same period of time. Before calling this method application must ensure, that
+ user language is supported by libverify API using {@link VerificationStateDescriptor.IvrInfo#supportedIvrLanguages}.
+ @param sessionId verification session id
+ @param listener call-ui request state listener (NOTE: it will be called from background thread)
+ */
+-(void) requestCallUIForSession:(NSString *) sessionId
+                   withListener:(id<NTFCallUIStateListener>) listener;
+
+/*!
  Requests state of the current session asynchronously.
  @param sessionId verification session id
  @param listener callback with current verification session state (NOTE: it will be called from background thread)
@@ -161,8 +195,8 @@ The most part of other {@link VerificationApi} functions use this id as a mandat
  @param service variation service for a target backend (e.g icq_registration)
  @param phoneNumber user provided phone number part
  @param extendedInfo true if application wants to receive extended phone info, otherwise false
-                     (<b>NOTE: the only reason to set this parameter to false is internet traffic decrease during
-                     registration process, but anyway it will be an insignificant benefit</b>)
+ (<b>NOTE: the only reason to set this parameter to false is internet traffic decrease during
+ registration process, but anyway it will be an insignificant benefit</b>)
  @param listener callback with phone number information (NOTE: it will be called from background thread)
  */
 -(void) checkPhoneNumber:(NSString *) checkId
