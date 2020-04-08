@@ -1,11 +1,15 @@
 # Changelog
 
+## Version 1.2.2
+
+* Notify: Fix handling of unregistering to remote notificatins.
+
 ## Version 1.2.1
 
-* [SMSAPI-1189] - Verify, VerifyControls: Add support CallUI.
-* [SMSAPI-2053] - Verify: Add verification methods selection.
-* [SMSAPI-2125] - Verify: Add CallUI and Ivr into manual_routes.
-* [SMSAPI-2314] - Verify: Add details for network errors.
+* Verify, VerifyControls: Add support CallUI.
+* Verify: Add verification methods selection.
+* Verify: Add CallUI and Ivr into manual_routes.
+* Verify: Add details for network errors.
 
 ## Version 1.2.0
 

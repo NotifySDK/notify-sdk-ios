@@ -1,6 +1,6 @@
 # NotifySDK
 
-Notify SDK is a solution for sending push notifications and verify user's phone number through sms/push/IVR.
+Notify SDK is a solution for sending push notifications and verify user's phone number through sms/push/IVR. 
 
 ## Libraries
 
@@ -161,7 +161,7 @@ Both of our libraries must be configured before usage. The simplest way is make 
                         Static - enables default fonts and doesn't observe changes in system settings
                         Dynamic - uses default fonts as base font and changes size of font according to system settings
                         Custom - library asks fonts from host application. Library observes system settings and asks new fonts on change them.
-                    Default fonts and their sizes you can find in notify library headers.
+                    Default fonts you can find in code.
                 -->
                 <key>FontType</key>
                 <string>Static</string>
