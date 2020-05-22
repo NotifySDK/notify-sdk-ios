@@ -48,6 +48,70 @@ NS_ASSUME_NONNULL_BEGIN
          withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
 
 /*!
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userId email, token, uuid or any other string identifier to identify user
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
+-(NSString *) startVerification:(NSString *) verificationService
+                     withUserId:(NSString *) userId;
+
+/*!
+ This method is very similar to the method `startVerification:withUserId:` but this method allows application select only one method to verify phone number.
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userId email, token, uuid or any other string identifier to identify user
+ @param verificationMethod is the only method will be used to verify phone number
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
+-(NSString *) startVerification:(NSString *) verificationService
+                     withUserId:(NSString *) userId
+         withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
+
+/**
+ Method to verification from VKConnect.
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userProvidedPhoneNumber phone number entered by user (no format restrictions)
+ @param srcApplication application that used by VCConnect as verificator
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
+-(NSString *) startVKConnectVerification:(NSString *) verificationService
+                               withPhone:(NSString *) userProvidedPhoneNumber
+                      withSrcApplication:(nullable NSString *) srcApplication;
+
+/**
+ Method to verification from VKConnect.
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userId email, token, uuid or any other string identifier to identify user
+ @param srcApplication application that used by VCConnect as verificator
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
+-(NSString *) startVKConnectVerification:(NSString *) verificationService
+                              withUserId:(NSString *) userId
+                      withSrcApplication:(nullable NSString *) srcApplication;
+
+/**
+ Method to verification from VKConnect.
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param userProvidedPhoneNumber phone number entered by user (no format restrictions)
+ @param userId email, token, uuid or any other string identifier to identify user
+ @param srcApplication application that used by VCConnect as verificator
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+ */
+-(NSString *) startVKConnectVerification:(NSString *) verificationService
+                               withPhone:(NSString *) userProvidedPhoneNumber
+                              withUserId:(NSString *) userId
+                      withSrcApplication:(nullable NSString *) srcApplication;
+
+/*!
  Cancels verification process asynchronously. It's important to remove a subscription
  using {@link VerificationApi#removeVerificationStateChangedListener} or/and set local variable keeping
  verification session id value to null.

@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.3.0
+
+* Verify: Add verification by user_id.
+* Verify: Add verification through VKConnect
+
 ## Version 1.2.2
 
 * Notify: Fix handling of unregistering to remote notificatins.

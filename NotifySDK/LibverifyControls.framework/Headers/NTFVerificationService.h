@@ -155,6 +155,22 @@ NS_ASSUME_NONNULL_BEGIN
                  withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
 
 /**
+ * Validate user by userId and request verification code
+ * @param userId email, token or any other user identifier
+ * All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestVerificationCodeByUserId:(NSString *)userId;
+
+/**
+ * Validate user by userId and request verification code
+ * @param userId email, token or any other user identifier
+ * @param verificationMethod allows user to select route to send verification code.
+ * All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestVerificationCodeByUserId:(NSString *)userId
+                 withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
+
+/**
  * Request new verification code for phone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
  * All results of verification will be delivered via NTFVerificationServiceDelegate
  */
