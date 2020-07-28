@@ -4,7 +4,7 @@
 #import <Libverify/NTFVerifyCallbacks.h>
 
 typedef NS_ENUM(NSUInteger, NTFVerifyApiVerificationMethod) {
-    NTFVerifyApiVerificationTypeSms,
+    NTFVerifyApiVerificationTypeSms = 0,
     NTFVerifyApiVerificationTypePush,
     NTFVerifyApiVerificationTypeCallUI,
     NTFVerifyApiVerificationTypeIvr,
@@ -110,6 +110,20 @@ NS_ASSUME_NONNULL_BEGIN
                                withPhone:(NSString *) userProvidedPhoneNumber
                               withUserId:(NSString *) userId
                       withSrcApplication:(nullable NSString *) srcApplication;
+
+/**
+ This method may be used to inform library libverify that user was logged in through VKConnect.
+ Call of this method will start process with behavior similar to verification but it always will return status 'verified'.
+ Also there are a few differences in server-server communication.
+ This method is required to make a valid verified instance in libverify.
+ @param verificationService variation service for a target backend (e.g icq_registration)
+ @param srcApplication application that used by VCConnect as verificator
+ Note that, the provided mapping is valid only for passed in verificationService argument service name.
+ @return verification session id, which should be stored in client application during verification process.
+ The most part of other {@link VerificationApi} functions use this id as a mandatory argument.
+*/
+-(NSString *) loggedInWithVKConnect:(NSString *)verificationService
+                     srcApplication:(nullable NSString *)srcApplication;
 
 /*!
  Cancels verification process asynchronously. It's important to remove a subscription

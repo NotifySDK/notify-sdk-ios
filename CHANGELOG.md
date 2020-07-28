@@ -1,9 +1,13 @@
 # Changelog
 
+## Version 1.4.0
+
+* Verify: Add some fixes for VKConnect.
+
 ## Version 1.3.0
 
 * Verify: Add verification by user_id.
-* Verify: Add verification through VKConnect
+* Verify: Add verification through VKConnect.
 
 ## Version 1.2.2
 
