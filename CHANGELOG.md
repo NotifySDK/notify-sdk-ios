@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.5.0
+
+* Verify: Add support CallUI.
+
 ## Version 1.4.0
 
 * Verify: Add some fixes for VKConnect.

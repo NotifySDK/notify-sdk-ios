@@ -189,17 +189,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)requestIvrCall;
 
 /**
- * Request call to thone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
- * All results of verification will be delivered via NTFVerificationServiceDelegate
- */
-- (void)requestCallUI;
-
-/**
  * Cancels verification process asynchronously. It's important to remove a subscription.
  * Automatically called when verification process failed.
  * Invoke this function to force cancel verification session and renew {@link NTFVerificationService#verificationID}
  */
 - (void)cancelVerification:(NTFVerificationCancelReason)reason;
+
 /**
  * Finalizes verification process asynchronously. Each verification session will be available for state querying
  */

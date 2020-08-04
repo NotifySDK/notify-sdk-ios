@@ -220,20 +220,6 @@ NS_ASSUME_NONNULL_BEGIN
                withListener:(id<NTFIvrStateListener>) listener;
 
 /*!
- Call-UI - it's a type of verification when user receives incoming phone call and have to use tail of incoming number as a verification code.
- Requests phone call asynchronously. Note, that you should implement UI visible timer
- ({@link VerificationStateDescriptor.IvrInfo#ivrTimeoutSec} - initial timer value) before enabling button,
- which forces this function call. It is supposed, that timer countdown starts when application firstly receives
- {@link VerificationState#WAITING_FOR_SMS_CODE} state. After pressing on the button, you should also block it
- and restart the timer for the same period of time. Before calling this method application must ensure, that
- user language is supported by libverify API using {@link VerificationStateDescriptor.IvrInfo#supportedIvrLanguages}.
- @param sessionId verification session id
- @param listener call-ui request state listener (NOTE: it will be called from background thread)
- */
--(void) requestCallUIForSession:(NSString *) sessionId
-                   withListener:(id<NTFCallUIStateListener>) listener;
-
-/*!
  Requests state of the current session asynchronously.
  @param sessionId verification session id
  @param listener callback with current verification session state (NOTE: it will be called from background thread)

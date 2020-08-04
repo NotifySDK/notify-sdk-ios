@@ -33,12 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@protocol NTFCallUIStateListener <NSObject>
-
--(void)onCallUIRequestExecuted:(NTFVerificationFailReason) result;
-
-@end
-
 /**
  * Listener for receiving phone number validation results from {@link VerificationApi#checkPhoneNumber} method call.
  * */
