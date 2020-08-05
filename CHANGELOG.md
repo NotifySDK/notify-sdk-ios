@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.5.1
+
+* Verify: Fix crash
+
 ## Version 1.5.0
 
 * Verify: Add support CallUI.
