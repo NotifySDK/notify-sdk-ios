@@ -33,12 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL useSandbox;
 
-/**
- This flag asks server to send push on APNS sandbox.
- It fills automatically during creation config.
- */
-@property (nonatomic, assign) bool apnsSandbox;
-
 @end
 
 

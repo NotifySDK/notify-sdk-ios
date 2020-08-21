@@ -1,8 +1,12 @@
 # Changelog
 
+## Version 1.5.2
+
+* Verify: Add some fixes.
+
 ## Version 1.5.1
 
-* Verify: Fix crash
+* Verify: Fix crash.
 
 ## Version 1.5.0
 
