@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 1.6.0
+
+* Verify: Add verification parameters to configure verification process.
+* Verify: Add logo of service to the incoming verification push.
+* Verify: Add some internal fixes and changes.
+
 ## Version 1.5.2
 
 * Verify: Add some fixes.
