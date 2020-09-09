@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.6.1
+
+* Verify: Add some fixes.
+
 ## Version 1.6.0
 
 * Verify: Add verification parameters to configure verification process.
@@ -161,3 +165,4 @@
 ## Version 1.0.3
 
 * Move to Cocoapods
+
