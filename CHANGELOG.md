@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.6.2
+
+* Verify: Fix twice sending error messages to delegate.  
+
 ## Version 1.6.1
 
 * Verify: Add some fixes.
