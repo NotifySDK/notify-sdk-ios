@@ -1,28 +1,32 @@
 # Changelog
 
-## Version 1.6.2
+## Version 1.7.0
+
+* Verify: Rollback fixes that were added to support CallUI.
+
+## Version 1.6.2 (Deprecated)
 
 * Verify: Fix twice sending error messages to delegate.  
 
-## Version 1.6.1
+## Version 1.6.1 (Deprecated)
 
 * Verify: Add some fixes.
 
-## Version 1.6.0
+## Version 1.6.0 (Deprecated)
 
 * Verify: Add verification parameters to configure verification process.
 * Verify: Add logo of service to the incoming verification push.
 * Verify: Add some internal fixes and changes.
 
-## Version 1.5.2
+## Version 1.5.2 (Deprecated)
 
 * Verify: Add some fixes.
 
-## Version 1.5.1
+## Version 1.5.1 (Deprecated)
 
 * Verify: Fix crash.
 
-## Version 1.5.0
+## Version 1.5.0 (Deprecated)
 
 * Verify: Add support CallUI.
 
@@ -169,4 +173,5 @@
 ## Version 1.0.3
 
 * Move to Cocoapods
+
 
