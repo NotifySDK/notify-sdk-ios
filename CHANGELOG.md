@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.7.1
+
+* Verify: Fix double call of NTFVerificationService's delegate method. 
+
 ## Version 1.7.0
 
 * Verify: Rollback fixes that were added to support CallUI.
