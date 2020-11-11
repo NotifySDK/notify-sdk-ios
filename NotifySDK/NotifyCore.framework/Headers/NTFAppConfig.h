@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *appKey;
 @property (nonatomic, assign) bool supportDirectPush;
 
+/**
+ Please enable this flag only if you know what you do.
+ Be sure that your UI is prepared to work with routes.
+ */
+@property (nonatomic, assign) bool useCallUIRoute;
+
 /*!
  This flag enables or disables usage sandbox API and sandbox APNS hosts for libverify.
  As a protection, it will work only with enabled debug mode. Else this flag will be ignored.

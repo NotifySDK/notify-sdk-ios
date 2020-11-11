@@ -8,61 +8,61 @@
 	<true/>
 	<key>LibNotify</key>
 	<dict>
-        <key>Activity</key><!-- Configuration of activity in libnotify -->
-        <dict>
-            <key>Colors</key>
-            <dict>
-                <key>DarkModeSupported</key><!-- Whether library should configure activity for dark mode or not -->
-                <true/>
-                <key>BackgroundColor</key>
-                <dict>
-                    <key>Light</key>
-                    <string>#70D05A</string>
-                    <key>Dark</key>
-                    <string>#70D05A</string>
-                </dict>
-                <key>TextColor</key>
-                <dict>
-                    <key>Light</key>
-                    <string>#70D05A</string>
-                    <key>Dark</key>
-                    <string>#70D05A</string>
-                </dict>
-                <key>AccentColor</key>
-                <dict>
-                    <key>Light</key>
-                    <string>#70D05A</string>
-                    <key>Dark</key>
-                    <string>#70D05A</string>
-                </dict>
-                <key>ButtonTextColor</key>
-                <dict>
-                    <key>Light</key>
-                    <string>#70D05A</string>
-                    <key>Dark</key>
-                    <string>#70D05A</string>
-                </dict>
-                <key>CloseButtonColor</key>
-                <dict>
-                    <key>Light</key>
-                    <string>#70D05A</string>
-                    <key>Dark</key>
-                    <string>#70D05A</string>
-                </dict>
-            </dict>
-            <key>FontType</key>
-            <string>Dynamic</string>
-        </dict>
+		<key>Activity</key>
+		<dict>
+			<key>Colors</key>
+			<dict>
+				<key>DarkModeSupported</key>
+				<true/>
+				<key>BackgroundColor</key>
+				<dict>
+					<key>Light</key>
+					<string>#70D05A</string>
+					<key>Dark</key>
+					<string>#70D05A</string>
+				</dict>
+				<key>TextColor</key>
+				<dict>
+					<key>Light</key>
+					<string>#70D05A</string>
+					<key>Dark</key>
+					<string>#70D05A</string>
+				</dict>
+				<key>AccentColor</key>
+				<dict>
+					<key>Light</key>
+					<string>#70D05A</string>
+					<key>Dark</key>
+					<string>#70D05A</string>
+				</dict>
+				<key>ButtonTextColor</key>
+				<dict>
+					<key>Light</key>
+					<string>#70D05A</string>
+					<key>Dark</key>
+					<string>#70D05A</string>
+				</dict>
+				<key>CloseButtonColor</key>
+				<dict>
+					<key>Light</key>
+					<string>#70D05A</string>
+					<key>Dark</key>
+					<string>#70D05A</string>
+				</dict>
+			</dict>
+			<key>FontType</key>
+			<string>Dynamic</string>
+		</dict>
 		<key>Enabled</key>
 		<true/>
 		<key>Application</key>
 		<dict>
 			<key>Name</key>
-			<string>Your app name</string>
+			<string>App name (obsolete)</string>
 			<key>Id</key>
-			<string>Identifier of application</string>
+			<string>App id (you can get from CRM)</string>
 			<key>Secret</key>
-			<string>Secret key you can get from CRM</string>
+			<string>Secret key (you can get from CRM)</string>
 		</dict>
 	</dict>
 	<key>LibVerify</key>
@@ -74,12 +74,12 @@
 		<key>Application</key>
 		<dict>
 			<key>Name</key>
-			<string>Your app name</string>
+			<string>App name</string>
 			<key>Key</key>
-			<string>Your app key</string>
+			<string>App key</string>
 		</dict>
 	</dict>
 	<key>SharedGroupId</key>
-	<string>Your shared app group</string>
+	<string>Shared Group Id</string>
 </dict>
 </plist>

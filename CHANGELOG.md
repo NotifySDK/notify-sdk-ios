@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.8.0
+
+* Verify: Return CallUI support.
+* Verify: Optimize server communication protocol.
+
 ## Version 1.7.1
 
 * Verify: Fix double call of NTFVerificationService's delegate method. 

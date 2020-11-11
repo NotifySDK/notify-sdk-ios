@@ -3,6 +3,24 @@
 //TODO - fix references from Android
 
 /**
+ Kind of routes to delivery verification code
+ */
+typedef NS_ENUM(NSUInteger, NTFVerificationRoute) {
+    /// Client doesn't know which route will be used
+    NTFVerificationRouteUndefined,
+    /// Server will user SMS as delivery mechanism
+    NTFVerificationRouteSms,
+    /// Server will user Push as delivery mechanism
+    NTFVerificationRoutePush,
+    /// Server will user IVR as delivery mechanism
+    NTFVerificationRouteIvr,
+    /// Server will user CallUI as delivery mechanism
+    /// Client will receive incoming phone call and
+    /// should use last N figures from number.
+    NTFVerificationRouteCallUI,
+};
+
+/**
  * Describes reason why an application or a user intend to cancel started before
  * phone verification session.
  * */

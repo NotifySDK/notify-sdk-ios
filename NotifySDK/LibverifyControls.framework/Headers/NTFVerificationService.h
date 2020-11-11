@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 
 #import <Libverify/NTFVerifyApi.h>
+#import <Libverify/NTFVerificationParameters.h>
 #import <Libverify/NTFVerifyConstants.h>
 
 typedef NS_ENUM(NSInteger, NTFVerificationStep) {
@@ -62,6 +63,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)verificationService:(NTFVerificationService *)service
     requestIvrCallCompleted:(BOOL)success
+                      state:(NTFVerifyStateDescriptor *)state;
+
+/**
+ * Notify that call for call-ui request completed
+ * @param success Indicates if request was successful
+ * @param state Actual state of verification process
+ */
+- (void)verificationService:(NTFVerificationService *)service
+     requestCallUICompleted:(BOOL)success
                       state:(NTFVerifyStateDescriptor *)state;
 
 /**
@@ -146,6 +156,15 @@ NS_ASSUME_NONNULL_BEGIN
                  withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
 
 /**
+ * Validate phone number and request verification code
+ * @param phoneNumber phone number entered by user (no format restrictions)
+ * @param params verification parameters
+ * All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestVerificationCodeForPhone:(NSString *)phoneNumber
+                             withParams:(NTFVerificationParameters *)params;
+
+/**
  * Validate user by userId and request verification code
  * @param userId email, token or any other user identifier
  * All results of verification will be delivered via NTFVerificationServiceDelegate
@@ -160,6 +179,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)requestVerificationCodeByUserId:(NSString *)userId
                  withVerificationMethod:(NTFVerifyApiVerificationMethod)verificationMethod;
+
+/**
+ * Validate user by userId and request verification code
+ * @param userId email, token or any other user identifier
+ * @param params verification parameters
+ * All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestVerificationCodeByUserId:(NSString *)userId
+                             withParams:(NTFVerificationParameters *)params;
 
 /**
  * Request new verification code for phone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
@@ -185,6 +213,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Invoke this function to force cancel verification session and renew {@link NTFVerificationService#verificationID}
  */
 - (void)cancelVerification:(NTFVerificationCancelReason)reason;
+
 /**
  * Finalizes verification process asynchronously. Each verification session will be available for state querying
  */

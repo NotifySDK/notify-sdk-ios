@@ -9,3 +9,4 @@
 #import <Libverify/NTFVerifyStateDescriptor.h>
 #import <Libverify/NTFVerify.h>
 #import <Libverify/NTFVerifyExtensionApi.h>
+#import <Libverify/NTFVerificationParameters.h>
