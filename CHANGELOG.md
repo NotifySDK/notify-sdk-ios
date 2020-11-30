@@ -1,5 +1,13 @@
 # Changelog
 
+## Current
+
+* Verify: Add security fix.
+* Verify: Add information about library version to requests.
+* Verify: Add sending parameter external_id to verify. 
+* Verify: Fix incorrect behaviour in mobile_id.
+* Verify: Add detection of aps environment.
+
 ## Version 1.8.0
 
 * Verify: Return CallUI support.

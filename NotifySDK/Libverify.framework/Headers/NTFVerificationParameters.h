@@ -10,6 +10,9 @@ NS_ASSUME_NONNULL_BEGIN
 // But you can disable this route type setted up callUIDisabled as true.
 @property (nonatomic, assign) bool callUIDisabled;
 
+// This field is required to additional checks in some services.
+@property (nonatomic, strong, nullable) NSString * externalId;
+
 @end
 
 NS_ASSUME_NONNULL_END

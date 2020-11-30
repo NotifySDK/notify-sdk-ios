@@ -58,28 +58,26 @@
 		<key>Application</key>
 		<dict>
 			<key>Name</key>
-			<string>App name (obsolete)</string>
+			<string>Libnotify app name (obsolete)</string>
 			<key>Id</key>
-			<string>App id (you can get from CRM)</string>
+			<string>Libnotify app id</string>
 			<key>Secret</key>
-			<string>Secret key (you can get from CRM)</string>
+			<string>Secret key</string>
 		</dict>
 	</dict>
 	<key>LibVerify</key>
 	<dict>
 		<key>Enabled</key>
 		<true/>
-		<key>DirectPush</key>
-		<false/>
 		<key>Application</key>
 		<dict>
 			<key>Name</key>
-			<string>App name</string>
+			<string>Libverify app name</string>
 			<key>Key</key>
-			<string>App key</string>
+			<string>Libverify app key</string>
 		</dict>
 	</dict>
 	<key>SharedGroupId</key>
-	<string>Shared Group Id</string>
+	<string>App group</string>
 </dict>
 </plist>

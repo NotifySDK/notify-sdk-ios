@@ -66,15 +66,6 @@ NS_ASSUME_NONNULL_BEGIN
                       state:(NTFVerifyStateDescriptor *)state;
 
 /**
- * Notify that call for call-ui request completed
- * @param success Indicates if request was successful
- * @param state Actual state of verification process
- */
-- (void)verificationService:(NTFVerificationService *)service
-     requestCallUICompleted:(BOOL)success
-                      state:(NTFVerifyStateDescriptor *)state;
-
-/**
  * Notify that actual state of verification process changed
  * @param state Actual state of verification process
  */
