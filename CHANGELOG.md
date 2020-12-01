@@ -1,6 +1,6 @@
 # Changelog
 
-## Current
+## Version 1.8.1
 
 * Verify: Add security fix.
 * Verify: Add information about library version to requests.
