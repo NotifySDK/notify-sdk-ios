@@ -1,6 +1,12 @@
 # Changelog
 
-## Version 1.8.1
+## 1.8.2
+
+* Verify: Optimize sending verification codes.
+* Verify: Fix MobileId.
+* Verify: Fix request of new sms code.
+
+## 1.8.1
 
 * Verify: Add security fix.
 * Verify: Add information about library version to requests.

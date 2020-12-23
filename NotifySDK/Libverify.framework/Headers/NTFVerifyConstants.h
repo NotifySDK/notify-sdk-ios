@@ -110,18 +110,22 @@ typedef NS_ENUM(NSInteger, NTFVerificationSource) {
     /**
      * User entered code into provided by an application text form
      * */
-    NTFVerificationSourceUserInput = 1,
+    NTFVerificationSourceUserInput,
     /**
      * This instance has been verified earlier and API returns verification token without any other actions.
      * It it possible only if a device configuration(imei, imsi, advertisement_id) hasn't been changed and
      * an application hasn't been reinstalled since last instance verification.
      * */
-    NTFVerificationSourceAlreadyVerified = 2,
+    NTFVerificationSourceAlreadyVerified,
     /**
      * This libverify instance received sms code from another libverify enabled application across
      * this system using IPC connection.
      * */
-    NTFVerificationSourceApplicationLocal = 3
+    NTFVerificationSourceApplicationLocal,
+    /**
+     * Code was received through MobileId.
+     * */
+    NTFVerificationSourceMobileId,
 };
 
 /**
