@@ -1,10 +1,13 @@
 #import <Foundation/Foundation.h>
 
 #import <Libverify/NTFVerifyConstants.h>
+#import <Libverify/NTFVerifyRouteInfo.h>
+#import <Libverify/NTFVerifyCodeDeliveryInfo.h>
 
 @class NTFSmsCodeInfo;
 @class NTFIvrInfo;
 @class NTFCallUIInfo;
+@class NTFManualResendInfo;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -119,6 +122,11 @@ extern NTFVerifyStateDescriptorUserInfoKey const NTFVerifyStateDescriptorUserInf
 @property(nonatomic, readonly) NTFVerificationRoute currentRoute;
 
 /**
+ Information used in manual resends.
+ */
+@property (nonatomic, readonly, nullable) NTFManualResendInfo * manualResendInfo;
+
+/**
  @return Returns <b>true</b>  if verification has been completed successfully, otherwise - false.
  */
 -(BOOL) completedSuccessfully;
@@ -198,6 +206,34 @@ extern NTFVerifyStateDescriptorUserInfoKey const NTFVerifyStateDescriptorUserInf
  Required code length. Actually this field is a doublicate of field `smsCodeLength` from `smsCodeInfo`.
  */
 @property (readonly, nonatomic) NSUInteger codeLength;
+
+@end
+
+// MARK: - Manual resend information
+
+/**
+ Information for usage in the manual resend mode.
+ */
+@interface NTFManualResendInfo : NSObject
+
++ (instancetype)new NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
+
+/**
+ Current route to delivery code.
+ */
+@property (nonatomic, readonly) NTFVerifyRouteInfo * currentRoute;
+
+/**
+ List of available routes to select.
+ */
+@property (nonatomic, readonly) NSArray<NTFVerifyRouteInfo *> *userControlledRoutes;
+
+/**
+ Additional information about code delivery status through current route.
+ This information can be delivered separately from `currentRoute` and `userControlledRoutes` and at first can be nil.
+ */
+@property (nonatomic, readonly, nullable) NTFVerifyCodeDeliveryInfo * codeDeliveryInfo;
 
 @end
 

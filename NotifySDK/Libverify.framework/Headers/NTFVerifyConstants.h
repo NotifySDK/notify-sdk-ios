@@ -18,6 +18,11 @@ typedef NS_ENUM(NSUInteger, NTFVerificationRoute) {
     /// Client will receive incoming phone call and
     /// should use last N figures from number.
     NTFVerificationRouteCallUI,
+    /// Transparent mechanics to check phone number.
+    /// It doesn't require user interaction
+    NTFVerificationRouteMobileId,
+    /// Text to speech
+    NTFVerificationRouteTts,
 };
 
 /**
@@ -96,7 +101,12 @@ typedef NS_ENUM(NSInteger, NTFVerificationFailReason) {
      * there is no available network connection during first phase of verification process, started using
      * {@link VerificationApi#startVerification} method.
      * */
-    NTFVerificationFailReasonNoNetwork = 7
+    NTFVerificationFailReasonNoNetwork = 7,
+    /**
+     * This kind of error will be raised if you've tried to use unplanned route during manual routes managed session.
+     * {@link VerificationApi#startVerification} method.
+     * */
+    NTFVerificationFailReasonNoMoreRoutes = 8,
 };
 
 /**

@@ -3,6 +3,7 @@
 #import <Libverify/NTFVerifyApi.h>
 #import <Libverify/NTFVerificationParameters.h>
 #import <Libverify/NTFVerifyConstants.h>
+#import <Libverify/NTFVerifyRouteInfo.h>
 
 typedef NS_ENUM(NSInteger, NTFVerificationStep) {
     NTFVerificationStepEnterPhone = 0,
@@ -185,6 +186,13 @@ NS_ASSUME_NONNULL_BEGIN
  * All results of verification will be delivered via NTFVerificationServiceDelegate
  */
 - (void)requestNewSmsCode;
+
+/**
+ Request new verification code for phone number specified in {@link NTFVerificationService#requestVerificationCodeForPhone(String)}
+ All results of verification will be delivered via NTFVerificationServiceDelegate
+ */
+- (void)requestNewCodeWithRoute:(NTFVerifyRouteInfo *)route;
+
 /**
  * Send asynchronously request to validate verification code
  * @param code verification code received via push notification, sms or ivr call

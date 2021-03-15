@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, getter=isEnabled) bool enabled;
 @property (nonatomic, copy, nullable) NSString *appName;
 @property (nonatomic, copy, nullable) NSString *appKey;
-@property (nonatomic, assign) bool supportDirectPush;
 
 /**
  Please enable this flag only if you know what you do.

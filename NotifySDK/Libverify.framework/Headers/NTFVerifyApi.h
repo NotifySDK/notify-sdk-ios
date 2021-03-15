@@ -3,6 +3,7 @@
 #import <Libverify/NTFVerificationParameters.h>
 #import <Libverify/NTFVerifyConstants.h>
 #import <Libverify/NTFVerifyCallbacks.h>
+#import <Libverify/NTFVerifyRouteInfo.h>
 
 typedef NS_ENUM(NSUInteger, NTFVerifyApiVerificationMethod) {
     NTFVerifyApiVerificationTypeSms = 0,
@@ -272,13 +273,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void) signOut:(bool) dropAllInstances;
 
-/*!
+/**
  Requests a new verification sms code for already existing and started session. Application must wait some
  time before enabling a button, which calls this method since transfer to
  {@link VerificationState#WAITING_FOR_SMS_CODE} state.
  @param sessionId verification session id
  */
 -(void) requestNewSmsCode:(NSString *) sessionId;
+
+/**
+ Resend code through selected route. Only for manual resend mode.
+ @param sessionId verification session id
+ @param route route you want to use to delivery of code next time
+ */
+-(void) requestNewCode:(NSString *) sessionId withRoute:(NTFVerifyRouteInfo *)route;
 
 /*!
  Requests ivr call asynchronously. Note, that you should implement UI visible timer

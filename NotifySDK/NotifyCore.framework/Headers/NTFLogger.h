@@ -2,8 +2,6 @@
 
 #define __NTFLogPrivate(level, format, ...) if (NTFLogger.logLevel >= level) { \
                                                 [NTFLogger logMessage:level \
-                                                                 file:@(__FILE__).lastPathComponent \
-                                                               method:@(__FUNCTION__) \
                                                               message:format, ##__VA_ARGS__]; \
                                             }
 
@@ -64,14 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(instancetype)init NS_UNAVAILABLE;
 
 + (void)logMessage:(NTFLoggerLogLevel)level
-              file:(NSString *)file
-            method:(NSString *)method
            message:(NSString *)message, ...;
-
-+ (void)enableFilter:(nullable NSPredicate *)filePredicate
-     methodPredicate:(nullable NSPredicate *)methodPredicate;
-
-+ (void)removeFilter;
 
 @property (nonatomic, class, assign) NTFLoggerLogLevel logLevel;
 

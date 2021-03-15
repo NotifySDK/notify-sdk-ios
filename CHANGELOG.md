@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.9.0
+
+* Fix pushstatus.
+* Remove support of direct pushes.
+* Change CallUI configuration process.
+* Remove unused parameters from request 'verify'.
+* Add support of manual resends of code.
+* Fix visual bug on code message settings interface.
+
 ## 1.8.2
 
 * Verify: Optimize sending verification codes.

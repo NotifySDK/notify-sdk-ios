@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-#import <Libverify/NTFDirectPushData.h>
 #import <Libverify/NTFPhoneCheckResult.h>
 #import <Libverify/NTFPhoneNumberCheckSession.h>
 #import <Libverify/NTFVerifyApi.h>
@@ -10,3 +9,5 @@
 #import <Libverify/NTFVerify.h>
 #import <Libverify/NTFVerifyExtensionApi.h>
 #import <Libverify/NTFVerificationParameters.h>
+#import <Libverify/NTFVerifyRouteInfo.h>
+#import <Libverify/NTFVerifyCodeDeliveryInfo.h>
