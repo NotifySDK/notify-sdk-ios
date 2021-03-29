@@ -351,6 +351,9 @@ NS_ASSUME_NONNULL_BEGIN
              withExtInfo:(BOOL) extendedInfo
             withListener:(id<NTFPhoneCheckListener>) listener;
 
+- (void)setApiEndpoint:(nullable NSString *)host;
+- (void)removeApiEndpoint;
+
 @end
 
 NS_ASSUME_NONNULL_END

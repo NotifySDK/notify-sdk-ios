@@ -1,13 +1,21 @@
 # Changelog
 
+## 1.10.0
+
+* Verify: Internal fix.
+* Verify: Add support change api endpoint.
+* Verify: Fix error when incoming verification message cannot be shown.
+* Verify: Fix resend code if manual resend mode enabled.
+* Libnotify: Internal fix.
+
 ## 1.9.0
 
-* Fix pushstatus.
-* Remove support of direct pushes.
-* Change CallUI configuration process.
-* Remove unused parameters from request 'verify'.
-* Add support of manual resends of code.
-* Fix visual bug on code message settings interface.
+* Verify: Fix pushstatus.
+* Verify: Remove support of direct pushes.
+* Verify: Change CallUI configuration process.
+* Verify: Remove unused parameters from request 'verify'.
+* Verify: Add support of manual resends of code.
+* Verify: Fix visual bug on code message settings interface.
 
 ## 1.8.2
 
