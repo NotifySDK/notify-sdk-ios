@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.1
+
+* Verify: Internal fix.
+
 ## 1.10.0
 
 * Verify: Internal fix.

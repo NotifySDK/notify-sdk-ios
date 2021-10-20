@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'NotifySDK'
-    s.version          = '1.10.0'
+    s.version          = '1.10.1'
     s.summary          = 'Libnotify and Libverify libraries.'
     
     s.description      = <<-DESC
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://notify.mail.ru'
     s.license          = { :type => 'LGPL-3.0', :file => 'NotifySDK/LICENSE' }
     s.author           = { 'Notify Mail.ru' => 'libverify@corp.mail.ru' }
-    s.source           = { :git => 'https://github.com/NotifySDK/notify-sdk-ios.git', :tag => 'v1.10.0' }
+    s.source           = { :git => 'https://github.com/NotifySDK/notify-sdk-ios.git', :tag => 'v1.10.1' }
     s.ios.deployment_target = '9.0'
     
     s.default_subspec  = ['Core', 'Notify']
