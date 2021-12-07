@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.10.2
+
+* Move to xcframeworks
+* Remove support libnotify
+
 ## 1.10.1
 
 * Verify: Internal fix.
