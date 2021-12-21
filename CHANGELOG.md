@@ -1,13 +1,18 @@
 # Changelog
 
+## 2.0.0-beta1
+
+* Libverify: Changed public API.
+* Libverify: Added support of automatic initialization and configuration.
+* Libnotify: Extracted to external repo.
+
 ## 1.10.2
 
-* Move to xcframeworks
-* Remove support libnotify
+* Move to xcframeworks in release.
 
 ## 1.10.1
 
-* Verify: Internal fix.
+* Libverify: Internal fix.
 
 ## 1.10.0
 
