@@ -1,9 +1,14 @@
 # Changelog
 
+## 1.11.0
+
+* Verify: Add public method to check whether incoming push is Libverify push or not.
+
 ## 1.10.2
 
-* Move to xcframeworks
-* Remove support libnotify
+* Move to xcframeworks.
+* Add support M1.
+* Remove Libnotify.
 
 ## 1.10.1
 
