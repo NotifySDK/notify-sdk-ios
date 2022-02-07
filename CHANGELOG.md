@@ -1,10 +1,10 @@
 # Changelog
 
-## 2.0.0-beta4
+## 2.0.0-beta5
 
 * Libverify: Changed public API.
 * Libverify: Added support of automatic initialization and configuration.
-* Libnotify: Extracted to external repo. 
+* Libnotify: Extracted to external repo.
 
 ## 1.10.2
 
