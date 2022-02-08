@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0-beta6
+## 2.0.0-beta7
 
 * Libverify: Changed public API.
 * Libverify: Added support of automatic initialization and configuration.
