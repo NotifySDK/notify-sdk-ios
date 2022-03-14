@@ -1,12 +1,13 @@
 # Changelog
 
-## 2.0.0-beta9
+## 2.0.0
 
 * Libnotify: Extracted to external repo and removed.
 * Libverify: Changed public API.
 * Libverify: Fix internal bugs.
 * Libverify: Added support of automatic initialization and configuration.
-* Libverify: Add public method to check whether incoming push is Libverify push or not. 
+* Libverify: Add public method to check whether incoming push is Libverify push or not.
+* Libverify: Added support of UIScene.
 
 ## 1.10.2
 
