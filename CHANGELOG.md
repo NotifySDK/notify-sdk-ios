@@ -1,6 +1,11 @@
 # Changelog
 
-## 2.0.1
+## 2.0.2
+
+* Libverify: Fix presentation popup after activation incoming push.
+* Libverify: Move handling verified state to enter code step.
+* Libverify: Fix internal logging.
+* Libverify: Optimize work with mobileid.
 
 ## 2.0.1
 
