@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+* Libverify: Fix MobileId.
+
 ## 2.0.2
 
 * Libverify: Fix presentation popup after activation incoming push.
