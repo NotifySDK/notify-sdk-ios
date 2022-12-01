@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.5
+
+* Libverify: Move handling verified state back to verifying phone number step by default.
+
 ## 2.0.4
 
 * Libverify: Fix handling restriction cellular data for mobileid.
