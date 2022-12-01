@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.4
+
+* Libverify: Fix handling restriction cellular data for mobileid.
+* Libverify: Improve mobileid.
+
 ## 2.0.3
 
 * Libverify: Fix MobileId.
