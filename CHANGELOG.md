@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+
+* Libverify: Internal changes.
+
 ## 2.1.0
 
 * Libverify: Modify callin.
