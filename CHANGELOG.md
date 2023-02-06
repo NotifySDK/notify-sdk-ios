@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.2
+
+* Libverify: Fix detection of mobileid availability.
+
 ## 2.1.1
 
 * Libverify: Internal changes.
