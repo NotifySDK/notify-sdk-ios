@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.3
+
+* Libverify: Internal changes.
+* Libverify: Fix fetcher.
+
 ## 2.1.2
 
 * Libverify: Fix detection of mobileid availability.
