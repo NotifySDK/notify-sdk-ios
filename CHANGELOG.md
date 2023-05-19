@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.4 
+
+* Libverify: Fix no network handling to right state.
+* Libverify: Fix wrong sms codes sending handling.  
+* Libverify: Fix failure reasons handling.
+
 ## 2.1.3
 
 * Libverify: Internal changes.
