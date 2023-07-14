@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.1
+
+* Libverify: Fixed session with same IDs error.
+* Libverify: Add handling redirects during work with mobileid.
+* Libverify: Fix mobileid logic.
+* Libverify: Add info about mobileid to stateDescriptor.
+
 ## 2.1.4 
 
 * Libverify: Fix no network handling to right state.
