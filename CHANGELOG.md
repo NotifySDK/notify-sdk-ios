@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.3.1  
+
+* Libverify: Add support BackgroundTasks.
+* Libverify: Add "total_fallback_timeout" field to callin push structure.
+* Libverify: Add outgoing call stats sending for callin
+
 ## 2.2.1
 
 * Libverify: Fixed session with same IDs error.
