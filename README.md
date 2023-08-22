@@ -6,7 +6,7 @@ Please request documentation and integration guide from developers.
 
 ## Requirements
 
-iOS 10.0
+iOS 11.0
 
 ## Author
 

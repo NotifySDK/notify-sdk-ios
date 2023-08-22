@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.3
+
+* Libverify: Hotfix.
+
 ## 2.3.2
 
 * Libverify: iOS 11.0 support returned.
