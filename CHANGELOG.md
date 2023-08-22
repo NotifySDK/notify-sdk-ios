@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.2
+
+* Libverify: iOS 11.0 support returned.
+
 ## 2.3.1  
 
 * Libverify: Add support BackgroundTasks.
