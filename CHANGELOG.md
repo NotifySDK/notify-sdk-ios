@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.4
+
+* Libverify: Adding error for terminal callin route.
+* Libverify: Fixed routes handling.
+
 ## 2.3.3
 
 * Libverify: Hotfix.
