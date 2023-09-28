@@ -18,13 +18,13 @@ let package = Package(
     ],
     targets: [
         Target.binaryTarget(name: "Libverify",
-                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.3.4/Libverify.zip",
-                            checksum: "a0444f2b1e3e61977152359b62baa78c1920a1936386768d9dbda61ed7c0d26c"),
+                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.3.5/Libverify.zip",
+                            checksum: "a9bf91ae703730a3efd63fc24e149412ba08b687ac2073b974e3d28111d50278"),
         Target.binaryTarget(name: "LibverifyControls",
-                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.3.4/LibverifyControls.zip",
-                            checksum: "47fdcaa1f303b7f850c4ab6fac3d2b313fa47375277bde761a9e968cd3baa995"),
+                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.3.5/LibverifyControls.zip",
+                            checksum: "8716eecd622d6154b535c21f1b08b53851b2d3e31351be586978175b7b2b3424"),
         Target.binaryTarget(name: "LibverifyExt",
-                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.3.4/LibverifyExt.zip",
-                            checksum: "6d692bc060a5f13eb8d744ef0bfb1f31748b13ad360ee6cb50cb4de8e7d8736b")
+                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.3.5/LibverifyExt.zip",
+                            checksum: "7e9381d7e5548b7211bcfbdbb69554e84e9a5c2c98947bd521e4b81e6a806044")
     ]
 )
