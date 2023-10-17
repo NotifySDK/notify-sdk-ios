@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.3.6
+
+* Libverify: Fixed callin descriptor with previous phone number before new.
+* Libverify: Fix code_source for callin.
+
 ## 2.3.5
 
 * Libverify: Fixed mobileId request params.
