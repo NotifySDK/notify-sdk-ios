@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.0
+
+* Libverify: Added IVR flag to callin info.
+
 ## 2.3.6
 
 * Libverify: Fixed callin descriptor with previous phone number before new.
