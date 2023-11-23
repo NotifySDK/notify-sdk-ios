@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.5.0
+
+* Libverify: Add route settings to VerificationParameters.
+* Libverify: Implemented listeners weak reference set.
+* Libverify: Moved session start to Notify api_dispatcher_queue.
+* Libverify: Reworked locks behaviour.
+* Libverify: Add UNSUPPORTED_ROUTES to UNSUPPORTED_NUMBER mapping.
+
 ## 2.4.0
 
 * Libverify: Added IVR flag to callin info.
