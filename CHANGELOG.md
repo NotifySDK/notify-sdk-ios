@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.6.0
+
+* Libverify: Added callback for signOut completion.
+* Libverify: Added default smsCodeInfo.
+* Libverify: Fixed mobileId request params.
+* Libverify: Upgraded UNSUPPORTED_ROUTES to UNSUPPORTED_NUMBER mapping.
+* Libverify: Fixed wrong error userVisibleReason text.
+
 ## 2.5.0
 
 * Libverify: Add route settings to VerificationParameters.
