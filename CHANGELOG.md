@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.1
+
+* Libverify: Add error on empty list of checks.
+
 ## 2.6.0
 
 * Libverify: Added callback for signOut completion.
