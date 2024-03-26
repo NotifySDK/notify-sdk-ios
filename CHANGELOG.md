@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.2-beta1
+
+* Libverify: Add requests counting
+
 ## 2.6.1
 
 * Libverify: Add error on empty list of checks.
