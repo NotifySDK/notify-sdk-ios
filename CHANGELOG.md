@@ -1,8 +1,9 @@
 # Changelog
 
-## 2.6.2-beta1
+## 2.6.2
 
-* Libverify: Add requests counting
+* Libverify,LibverifyControls,LibverifyExt - Add files PrivacyInfo.xcprivacy to public frameworks.
+* Libverify - Internal fix.
 
 ## 2.6.1
 
