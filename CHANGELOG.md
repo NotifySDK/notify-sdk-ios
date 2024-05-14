@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.0
+
+* Libverify - Add country code to phone number information.
+* Libverify - Fix library performance. 
+
 ## 2.6.2
 
 * Libverify,LibverifyControls,LibverifyExt - Add files PrivacyInfo.xcprivacy to public frameworks.
