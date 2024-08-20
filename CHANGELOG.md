@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.7.1-beta1
+
+* Libverify: Add requests counting
+
 ## 2.7.0
 
 * Libverify - Add country code to phone number information.
