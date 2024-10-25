@@ -1,8 +1,10 @@
 # Changelog
 
-## 2.7.1-beta1
+## 2.7.1
 
-* Libverify: Add requests counting
+* Libverify: Added more checks for resend code.
+* Libverify: Internal fix.
+* Libverify: Added error for unconfirmed route case.
 
 ## 2.7.0
 
