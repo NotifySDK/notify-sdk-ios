@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.7.2-alpha1
+
+* Libverify: Add messengers verification route
+
 ## 2.7.1
 
 * Libverify: Added more checks for resend code.
