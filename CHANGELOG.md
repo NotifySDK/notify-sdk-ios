@@ -1,8 +1,9 @@
 # Changelog
 
-## 2.7.2-alpha1
+## 2.7.2
 
-* Libverify: Add messengers verification route
+* Libverify: Logger update.
+* Libverify: Internal fix
 
 ## 2.7.1
 
