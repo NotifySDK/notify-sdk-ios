@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.8.0-alpha1
+## 2.8.0
 
 * Libverify: Add messengers verification route
 
