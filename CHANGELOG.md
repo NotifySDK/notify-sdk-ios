@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.8.1
+
+* Libverify: Add new param to Verify request
+
 ## 2.8.0
 
 * Libverify: Add messengers verification route
