@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.8.2-alpha1
+
+* Libverify: SwiftUI auto init
+
 ## 2.8.1
 
 * Libverify: Add new param to Verify request
