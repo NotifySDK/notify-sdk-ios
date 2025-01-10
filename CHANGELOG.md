@@ -1,8 +1,8 @@
 # Changelog
 
-## 2.8.2-alpha1
+## 2.8.3
 
-* Libverify: SwiftUI auto init
+* Libverify: Add VK icon to messengers verification route
 
 ## 2.8.1
 
