@@ -1,8 +1,8 @@
 # Changelog
 
-## 2.8.3
+## 2.8.4
 
-* Libverify: Add VK icon to messengers verification route
+* Libverify: Internal fix
 
 ## 2.8.1
 
