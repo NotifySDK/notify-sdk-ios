@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.8.5
+
+* Libverify: Messengers route verification improvements
+
 ## 2.8.4
 
 * Libverify: Internal fix
