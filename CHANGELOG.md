@@ -1,12 +1,8 @@
 # Changelog
 
-## 2.9.0
+## 2.8.6
 
-* Libverify: Added Tracer
-* Libverify: Support global storage
-* Libverify: Internal fix.
-* Libverify: Internal refactor
-* Libverify: Auto-substitution of code from push
+* Libverify: Internal fix
 
 ## 2.8.5
 
@@ -14,11 +10,7 @@
 
 ## 2.8.4
 
-* Libverify: Displaying VK icon when verifying via VK Messengers
-
-## 2.8.2-alpha1
-
-* Libverify: Support auto-init for Swift-UI projects
+* Libverify: Internal fix
 
 ## 2.8.1
 
