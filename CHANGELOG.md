@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.9.2
+
+* Libverify: Add delayed reset for custom route descriptor on resend
+* LibverifyExt: Update verification push UI.
+
 ## 2.9.1
 
 * Libverify: Internal fix
