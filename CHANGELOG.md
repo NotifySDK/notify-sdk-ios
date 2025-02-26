@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9.3
+
+* LibverifyExt: Swift downgraded from 6.0 to 5.0
+
 ## 2.9.2
 
 * Libverify: Add delayed reset for custom route descriptor on resend
