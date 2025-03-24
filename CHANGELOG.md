@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.9.4
+
+* Libverify: Internal fix
+* Libverify: Hide push notification after verification completed
+* Libverify: Post Changelog в Telegram and VKTeams on library update
+* Libverify: Increased library stability
+
 ## 2.9.3
 
 * LibverifyExt: Swift downgraded from 6.0 to 5.0
