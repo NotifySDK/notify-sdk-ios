@@ -13,16 +13,17 @@ let package = Package(
         .library(name: "LibverifyExt", targets: ["LibverifyExt"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/odnoklassniki/tracer-lite-ios.git", "1.1.0"..<"2.0.0"),
     ],
     targets: [
         Target.binaryTarget(name: "Libverify",
-                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.5/Libverify.zip",
-                            checksum: "a2616b39ae72588cac41089c0eb9fb0023c1c3ddafe08b7069f5f8f5b08261b4"),
+                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.6/Libverify.zip",
+                            checksum: "cb3d89d5ad2d067f96e463364c53d91cc99d4b8b0db12ae66ca7fbcf4996a5b0"),
         Target.binaryTarget(name: "LibverifyControls",
-                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.5/LibverifyControls.zip",
-                            checksum: "4a2d87d948ff1dce063fb624d337474320fab76859502c3e9d1dea4e4f093ed1"),
+                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.6/LibverifyControls.zip",
+                            checksum: "f95e07ff5b4b9bfbeab53dc7f0f5e484e4785d630a44a694b4cd0b6b59cec8ce"),
         Target.binaryTarget(name: "LibverifyExt",
-                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.5/LibverifyExt.zip",
-                            checksum: "c26cabe86a4dcaa1cf0639319d3b09fd0472689ccc6f97b5d2ec8a3b09e46c9e")
+                            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.6/LibverifyExt.zip",
+                            checksum: "5b53f93f94df3756324f879e617b7449c82803eeb58f81ce43a3a4fe1d3a512b")
     ]
 )
