@@ -18,12 +18,12 @@ let package = Package(
     targets: [
         Target.binaryTarget(name: "Libverify",
                             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.6/Libverify.zip",
-                            checksum: "0a223ce1e5712eb083fad450eb8a267d71121b3a1b5c694f5fca5985a818e634"),
+                            checksum: "6d59aadab199cc34a01e533df88c14f2af48bf98ee51fe4048b66e62618c528c"),
         Target.binaryTarget(name: "LibverifyControls",
                             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.6/LibverifyControls.zip",
-                            checksum: "cad8360748359a5aa3b8b7953594cc4d09024841e248d50da8b88403ab856ab0"),
+                            checksum: "44f07949eeb1cb450f906b8b9bf85cc54c6c1bb87c63638694516455e79a755e"),
         Target.binaryTarget(name: "LibverifyExt",
                             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.6/LibverifyExt.zip",
-                            checksum: "43373e45489634382ae127985ecc6dd8c539be33c2906f177d86491b502b2ecb")
+                            checksum: "746af8049759eff39d2a3d1686db69a5758e1dbf46baded0ab3da6f4691ebf8f")
     ]
 )
