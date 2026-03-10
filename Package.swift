@@ -15,27 +15,27 @@ let package = Package(
         .binaryTarget(
             name: "Libverify",
             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.10/Libverify.zip",
-            checksum: "088995f2315f1a5ba1a2366de792321a1af673b83cc46fb874eb48e4b33102ed"
+            checksum: "32de22449354b74a3b3c1f4de4344046ee2bc2457bb2b112576c57e13e788794"
         ),
         .binaryTarget(
             name: "LibverifyControls",
             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.10/LibverifyControls.zip",
-            checksum: "4f514cbf45680f054e43a3baa57237561499d93cfa9e9e9c7cc66c8286a24ec4"
+            checksum: "176898dfc9d8dad3522d23223cb2221db1e65da5509f93a6790d4e33b383ed1c"
         ),
         .binaryTarget(
             name: "LibverifyExt",
             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.10/LibverifyExt.zip",
-            checksum: "c7cfe9aa9e8dd1e500f0012f22f04bc09bc046d24cc21f129d89340b4a758aa5"
+            checksum: "666d86cee8b3b2911510413bd86cbeb67866e050adb640650ba5e55196b6515c"
         ),
         .binaryTarget(
             name: "LibverifyNoTracer",
             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.10/Libverify-NoTracer.zip",
-            checksum: "b12c4d0df32902511968f23e5d270f2bae650ff1a4d302a4d8c2dbd741270048"
+            checksum: "9bc0a3391bb9da747ecbb7abf789d86f1a7b887c24ef19225b0c0cbced346e2b"
         ),
         .binaryTarget(
             name: "LibverifyControlsNoTracer",
             url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.10/LibverifyControls-NoTracer.zip",
-            checksum: "06ae568d9772475d2d1ee4a51b14fe76005830fa8c9aefa2310d2268deb3b6dd"
+            checksum: "2b432226156a4151514874abf595c4713752933fcb7ff065b790a43f0c61fb1e"
         )
     ]
 )
