@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9.11
+
+* Libverify: Добавлен параметр messengerId в модель messengerInfo дескриптора стейта
+
 ## 2.9.10
 
 * Libverify: Актуализация кодовой базы
