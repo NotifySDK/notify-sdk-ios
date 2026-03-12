@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9.12
+
+* Libverify: Исправлена конфигурация сборки бинарного SDK. Теперь при упаковке используется корректная настройка `BUILD_LIBRARY_FOR_DISTRIBUTION`.
+
 ## 2.9.11
 
 * Libverify: Добавлен параметр messengerId в модель messengerInfo дескриптора стейта
