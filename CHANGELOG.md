@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.9.14-alpha1
+## 2.9.14
 
 * Libverify: Добавлен SSL пиннинг
 
