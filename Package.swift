@@ -14,28 +14,28 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Libverify",
-            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.16/Libverify.zip",
-            checksum: "1409430df1f325eebd3fd72ffcf3ca286295468dac533e3ca38f7fbda370febd"
+            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.17/Libverify.zip",
+            checksum: "2a92c7c420b96b73f07ee9b91cb913aa81e4abe9b79c5ceb6d5e7e57cc024524"
         ),
         .binaryTarget(
             name: "LibverifyControls",
-            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.16/LibverifyControls.zip",
-            checksum: "e0cbb0ce28d843da793ed9a309ff440edf33364ed853edc1446494349dc13c46"
+            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.17/LibverifyControls.zip",
+            checksum: "3d42e27ad1099f0029b983d260e80a6aff024efea80fe3fa7cea361fc45b3f40"
         ),
         .binaryTarget(
             name: "LibverifyExt",
-            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.16/LibverifyExt.zip",
-            checksum: "b0b30c7db31de9ab526743e0563e369770ccf3554a6bd19b51073a90d9b3d512"
+            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.17/LibverifyExt.zip",
+            checksum: "b49e8bc169f7aa596b3ec543e9d75e378db74806680a020768d6135adc95f122"
         ),
         .binaryTarget(
             name: "LibverifyNoTracer",
-            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.16/Libverify-NoTracer.zip",
-            checksum: "9b83a33e5f85589ab6322bb7f7faa718ab7a01e8ea318b6bf2b36c1f1fe9280a"
+            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.17/Libverify-NoTracer.zip",
+            checksum: "fbe1575350eaae4a6fb6c0b995f306e816131f53f92faae4f636e70411d066b3"
         ),
         .binaryTarget(
             name: "LibverifyControlsNoTracer",
-            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.16/LibverifyControls-NoTracer.zip",
-            checksum: "c4147fd633ba3c0c617c953de329dfa0cb2fd245664a093461a2f23d8184c221"
+            url: "https://github.com/notifySDK/notify-sdk-ios/releases/download/v2.9.17/LibverifyControls-NoTracer.zip",
+            checksum: "1d05186f336eed734cb0baa9a1394fc808f4d084eedf38d494b23d1ea807e247"
         )
     ]
 )
